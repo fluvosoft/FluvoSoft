@@ -182,16 +182,15 @@ export default function Hero() {
           {/* Title */}
           <h1
             ref={titleRef}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight text-center mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 leading-tight text-center mb-6 font-georama"
           >
-            Technology Solutions for Growing Businesses
+            We Don't Just Write Code. We Build <span className="inline-block bg-gradient-to-r from-brand-orange via-brand-orange-light via-brand-orange to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Revenue</span>.
           </h1>
           <p
             ref={textRef}
             className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto text-center"
           >
-            FluvoSoft is a technology solutions company that helps businesses grow with innovative software solutions. 
-            We build simple, smart solutions that work for companies of all sizes.
+            We bridge the gap between human innovation and digital reality. Fluvosoft is the venture studio that transforms raw concepts into automated, blockchain-secured ecosystems.
           </p>
           <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
@@ -210,7 +209,9 @@ export default function Hero() {
                 boxShadow: { duration: 0.2 }
               }}
             >
-              <span className="relative z-10">Explore Solutions</span>
+              <span className="relative z-10">Partner With Us →
+
+</span>
             </motion.a>
             <motion.a
               href="#contact"
@@ -228,7 +229,7 @@ export default function Hero() {
                 boxShadow: { duration: 0.2 }
               }}
             >
-              <span className="relative z-10">Get in Touch</span>
+              <span className="relative z-10">Fix an Appointment</span>
             </motion.a>
           </div>
         </div>
