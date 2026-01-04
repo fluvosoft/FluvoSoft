@@ -18,61 +18,61 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="bg-transparent">
-      <nav className="container">
-        <div className="relative flex items-center justify-between bg-brand-orange px-12 py-2">
-          <Link href="/" className="flex items-center gap-1">
+    <header className="bg-transparent w-full relative z-50">
+      <nav className="w-full relative">
+        <div className="relative flex items-center justify-between bg-brand-orange px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-2.5 md:py-3">
+          <Link href="/" className="flex items-center gap-1 sm:gap-1.5 z-10">
             <Image 
               src="/illustrations/fluvo_logo.png" 
               alt="FluvoSoft Logo" 
               width={60} 
               height={60}
-              className="object-contain"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[60px] lg:h-[60px] object-contain"
             />
-            <span className="text-2xl font-bold text-white font-logo">FluvoSoft</span>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold text-white font-logo whitespace-nowrap">FluvoSoft</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex items-center space-x-3 absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl">
+          <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 absolute left-1/2 transform -translate-x-1/2">
+            <Link href="/" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               Home
             </Link>
             <div className="relative group">
-              <button className="px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter flex items-center transition-colors rounded-xl">
+              <button className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter flex items-center transition-colors rounded-xl text-sm xl:text-base">
                 What we do
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-brand-orange-dark border border-brand-orange-light/30 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <Link href="/fluvo-soft-lab" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors rounded-t-xl">
+              <div className="absolute top-full left-0 mt-2 w-48 bg-brand-orange-dark border border-brand-orange-light/30 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link href="/fluvo-soft-lab" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors rounded-t-xl text-sm">
                   FluvoSoft Lab
                 </Link>
-                <Link href="/solana-toolkit" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors">
+                <Link href="/solana-toolkit" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors text-sm">
                   FluvoSoft Solana Toolkit
                 </Link>
-                <Link href="/corda" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors">
+                <Link href="/corda" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors text-sm">
                   Corda
                 </Link>
-                <Link href="/service-support" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors rounded-b-xl">
+                <Link href="/service-support" className="block px-4 py-2 text-white hover:bg-brand-orange-light/20 hover:text-brand-orange-light font-inter transition-colors rounded-b-xl text-sm">
                   Service and Support
                 </Link>
               </div>
             </div>
-            <Link href="/solutions" className="px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl">
+            <Link href="/solutions" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               Solutions
             </Link>
-            <Link href="/resources" className="px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl">
+            <Link href="/resources" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               Resources
             </Link>
-            <Link href="/about" className="px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl">
+            <Link href="/about" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               About
             </Link>
           </div>
 
           {/* CTA Button - Right */}
-          <div className="hidden md:block">
-            <Link href="/contact" className="px-5 py-2.5 bg-brand-orange-dark text-white font-medium font-inter transition-colors rounded-xl hover:bg-brand-orange-light inline-flex items-center gap-1">
+          <div className="hidden lg:block z-10">
+            <Link href="/contact" className="px-4 xl:px-5 py-2 xl:py-2.5 bg-brand-orange-dark text-white font-medium font-inter transition-colors rounded-xl hover:bg-brand-orange-light inline-flex items-center gap-1 text-sm xl:text-base">
               Book a Demo
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -82,9 +82,10 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-white"
+            className="lg:hidden p-2 text-white z-20 relative"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
@@ -96,43 +97,87 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Absolutely Positioned */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              className="md:hidden mt-4 pb-4"
+              className="lg:hidden absolute top-full left-0 w-full bg-brand-orange shadow-lg z-30"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
             >
               <motion.div
+                className="px-4 sm:px-6 md:px-8 pb-4 pt-2 space-y-1"
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
                 transition={{ delay: 0.1 }}
               >
-                <Link href="/" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
+                <Link 
+                  href="/" 
+                  className="block py-2.5 text-white hover:text-brand-orange-light font-inter transition-colors text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Home
                 </Link>
-                <Link href="/fluvo-soft-lab" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
-                  FluvoSoft Lab
-                </Link>
-                <Link href="/solana-toolkit" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
-                  FluvoSoft Solana Toolkit
-                </Link>
-                <Link href="/corda" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
-                  Corda
-                </Link>
-                <Link href="/solutions" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
+                <div className="pt-2 pb-1">
+                  <span className="block py-2 text-white/80 font-inter text-sm font-semibold uppercase tracking-wide">What we do</span>
+                  <Link 
+                    href="/fluvo-soft-lab" 
+                    className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    FluvoSoft Lab
+                  </Link>
+                  <Link 
+                    href="/solana-toolkit" 
+                    className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    FluvoSoft Solana Toolkit
+                  </Link>
+                  <Link 
+                    href="/corda" 
+                    className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Corda
+                  </Link>
+                  <Link 
+                    href="/service-support" 
+                    className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Service and Support
+                  </Link>
+                </div>
+                <Link 
+                  href="/solutions" 
+                  className="block py-2.5 text-white hover:text-brand-orange-light font-inter transition-colors text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Solutions
                 </Link>
-                <Link href="/resources" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
+                <Link 
+                  href="/resources" 
+                  className="block py-2.5 text-white hover:text-brand-orange-light font-inter transition-colors text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Resources
                 </Link>
-                <Link href="/about" className="block py-2 text-white hover:text-brand-orange-light font-inter transition-colors">
+                <Link 
+                  href="/about" 
+                  className="block py-2.5 text-white hover:text-brand-orange-light font-inter transition-colors text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   About
                 </Link>
-                <Link href="/contact" className="block py-2.5 px-5 bg-brand-orange-dark text-white rounded-xl inline-block mt-2 hover:bg-brand-orange-light font-inter transition-colors inline-flex items-center gap-1">
+                <Link 
+                  href="/contact" 
+                  className="block py-2.5 px-5 bg-brand-orange-dark text-white rounded-xl mt-3 hover:bg-brand-orange-light font-inter transition-colors inline-flex items-center gap-1 text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   Book a Demo
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
