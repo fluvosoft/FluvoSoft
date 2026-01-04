@@ -18,7 +18,7 @@ export default function Announcement() {
               className="object-contain"
             />
             <p className="text-sm text-white text-center">
-              We are open-sourcing Scale GenAI Platform's agentic infrastructure layer.
+              We are open-sourcing Scale GenAI Platform&apos;s agentic infrastructure layer.
             </p>
           </div>
           <Link 

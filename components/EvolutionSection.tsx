@@ -54,7 +54,7 @@ export default function EvolutionSection() {
 
                 {/* Description */}
                 <p className="text-xl text-white/90 leading-relaxed mb-8">
-                  Don't just watch the next trillion-dollar wealth transfer—control it. We are moving the world's real assets on-chain, making finance instant, borderless, and programmable. The future belongs to those who build it first.
+                  Don&apos;t just watch the next trillion-dollar wealth transfer—control it. We are moving the world&apos;s real assets on-chain, making finance instant, borderless, and programmable. The future belongs to those who build it first.
                 </p>
 
                 {/* CTA Button */}
