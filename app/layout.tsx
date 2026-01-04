@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Space_Grotesk, Georama, Inter, Syne_Mono } from "next/font/google";
+import { Poppins, Space_Grotesk, Georama, Inter, Macondo } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -30,9 +30,9 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-const syneMono = Syne_Mono({
+const macondo = Macondo({
   subsets: ["latin"],
-  variable: "--font-syne-mono",
+  variable: "--font-macondo",
   display: "swap",
   weight: ["400"],
 });
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${spaceGrotesk.variable} ${georama.variable} ${inter.variable} ${syneMono.variable} antialiased`}>
+      <body className={`${poppins.variable} ${spaceGrotesk.variable} ${georama.variable} ${inter.variable} ${macondo.variable} antialiased`}>
         {children}
       </body>
     </html>

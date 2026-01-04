@@ -42,7 +42,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50 opacity-50"
         initial={{ opacity: 0 }}

@@ -1,3 +1,4 @@
+import Announcement from '@/components/Announcement';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Partners from '@/components/Partners';
@@ -15,6 +16,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <Announcement />
       <Header />
       <Hero />
       <Partners />
