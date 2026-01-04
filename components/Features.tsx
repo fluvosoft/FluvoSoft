@@ -35,7 +35,7 @@ const stats = [
 
 export default function Features() {
   return (
-    <section className="py-10 bg-white">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -47,7 +47,7 @@ export default function Features() {
             
             <AnimatedSection delay={0.2}>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">
-                Agentic Solutions
+                <span className=" bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Agentic</span> Solutions
               </h3>
             </AnimatedSection>
             
@@ -55,6 +55,59 @@ export default function Features() {
               <p className="text-lg md:text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Transform your data and expertise into agentic solutions that continuously improve with human interaction.
               </p>
+            </AnimatedSection>
+          </div>
+
+          {/* Grid Section */}
+          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-8">
+            {/* First Card */}
+            <AnimatedSection delay={0.6}>
+              <div>
+                {/* Text Content */}
+                <div className="mb-6">
+                  <h4 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                    Defense & Intelligence
+                  </h4>
+                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                    Orchestrate agent workflows for decision advantage. Transform complex data into actionable intelligence with advanced AI agents.
+                  </p>
+                </div>
+                {/* Image with gap from top and left only */}
+                <div className="mt-8 pl-8">
+                  <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                    <img 
+                      src="/Agentic Solution/donovan.png" 
+                      alt="Defense & Intelligence Solutions"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Second Card */}
+            <AnimatedSection delay={0.8}>
+              <div>
+                {/* Text Content */}
+                <div className="mb-6">
+                  <h4 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                    Enterprise Solutions
+                  </h4>
+                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                    Deploy intelligent agents that automate workflows and enhance productivity across your organization with continuous learning.
+                  </p>
+                </div>
+                {/* Image with gap from top and left only */}
+                <div className="mt-8 pl-8">
+                  <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                    <img 
+                      src="/Agentic Solution/gen-ai.png" 
+                      alt="Enterprise Solutions"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             </AnimatedSection>
           </div>
         </div>
