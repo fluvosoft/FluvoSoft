@@ -35,95 +35,27 @@ const stats = [
 
 export default function Features() {
   return (
-    <section className="py-20 bg-brand-orange">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-6"
-            >
-              <div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Why Choose FluvoSoft
-                </h2>
-                
-                <div className="space-y-5 mb-8">
-                  <p className="text-lg md:text-xl text-white/95 leading-relaxed">
-                    We build smart, safe, and reliable software that helps businesses everywhere. We make new technology easy to use and affordable for companies big and small.
-                  </p>
-                  
-                  <p className="text-lg md:text-xl text-white/95 leading-relaxed">
-                    We started as a small team who love technology. Today, we work with over 50 companies around the world, building AI tools, blockchain apps, and custom software. Our focus on doing great work and helping clients succeed makes us a trusted choice for businesses looking for technology solutions.
-                  </p>
-                </div>
-              </div>
-
-              <motion.a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-orange rounded-xl font-semibold shadow-xl hover:shadow-2xl transition-shadow"
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -3,
-                  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)'
-                }}
-                whileTap={{ scale: 0.97, y: 0 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17,
-                }}
-              >
-                Get in touch
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </motion.a>
-            </motion.div>
-
-            {/* Right Column - Statistics */}
-            <motion.div
-              className="grid grid-cols-2 gap-4 md:gap-6"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  whileHover={{ 
-                    y: -5,
-                    scale: 1.02,
-                    boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)'
-                  }}
-                >
-                  {/* Icon */}
-                  <div className="mb-4 text-white">
-                    {stat.icon}
-                  </div>
-                  
-                  {/* Number */}
-                  <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
-                    {stat.number}
-                  </div>
-                  
-                  {/* Label */}
-                  <div className="text-base md:text-lg text-white/90 leading-relaxed font-medium">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+          <div className="text-center mb-16">
+            <AnimatedSection>
+              <h2 className="text-md md:text-md uppercase lg:text-md font-bold text-gray-900 font-inter mb-6">
+                Apply AI
+              </h2>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.2}>
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">
+                Agentic Solutions
+              </h3>
+            </AnimatedSection>
+            
+            <AnimatedSection delay={0.4}>
+              <p className="text-lg md:text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed mb-8">
+                Transform your data and expertise into agentic solutions that continuously improve with human interaction.
+              </p>
+            </AnimatedSection>
           </div>
         </div>
       </div>

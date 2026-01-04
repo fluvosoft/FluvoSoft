@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Space_Grotesk, Georama, Inter } from "next/font/google";
+import { Poppins, Space_Grotesk, Georama, Inter, Syne_Mono } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -30,6 +30,13 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
+const syneMono = Syne_Mono({
+  subsets: ["latin"],
+  variable: "--font-syne-mono",
+  display: "swap",
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
   title: "FluvoSoft - Technology Solutions Company | AI, Blockchain & Custom Software",
   description: "FluvoSoft helps businesses grow with innovative software solutions. We build AI tools, blockchain apps, and custom software for companies of all sizes.",
@@ -42,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${spaceGrotesk.variable} ${georama.variable} ${inter.variable} antialiased`}>
+      <body className={`${poppins.variable} ${spaceGrotesk.variable} ${georama.variable} ${inter.variable} ${syneMono.variable} antialiased`}>
         {children}
       </body>
     </html>

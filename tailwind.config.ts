@@ -21,9 +21,10 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'sans-serif'],
-        logo: ['var(--font-space-grotesk)', 'sans-serif'],
+        logo: ['var(--font-syne-mono)', 'monospace'],
         georama: ['var(--font-georama)', 'sans-serif'],
         inter: ['var(--font-inter)', 'sans-serif'],
+        satoshi: ['var(--font-syne-mono)', 'monospace'],
       },
     },
   },

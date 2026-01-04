@@ -25,12 +25,7 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between bg-black rounded-2xl px-6 py-4 shadow-sm">
-          <Link href="/" className="flex items-center gap-3">
-            <img 
-              src="/fluvo-soft-logo.png" 
-              alt="FluvoSoft Logo" 
-              className="h-8 w-auto"
-            />
+          <Link href="/" className="flex items-center">
             <span className="text-2xl font-bold text-white font-logo">FluvoSoft</span>
           </Link>
 
