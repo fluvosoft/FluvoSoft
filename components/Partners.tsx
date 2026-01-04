@@ -21,7 +21,7 @@ export default function Partners() {
     <section className="py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-xl font-semibold text-center text-gray-900 mb-12">
-          Fluvosoft works with Generative AI Companies, BD Government Agencies & Enterprises
+          <span className="inline-block bg-gradient-to-r from-brand-orange via-brand-orange-light via-brand-orange to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Fluvosoft works with</span> Generative AI Companies, BD Government Agencies & Enterprises
         </h2>
         <div className="relative">
           {/* Gradient masks for fade effect */}
