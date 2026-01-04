@@ -1,17 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import AnimatedSection from './AnimatedSection';
 
 const partners = [
-  { name: 'HSBC', logo: '/logos/hsbc.svg' },
-  { name: 'Bank of America', logo: '/logos/bank-of-america.svg' },
-  { name: 'Euroclear', logo: '/logos/euroclear.svg' },
-  { name: 'MUFG', logo: '/logos/mufg.svg' },
-  { name: 'Vodafone', logo: '/logos/vodafone.svg' },
-  { name: 'HQLA', logo: '/logos/hqla.svg' },
-  { name: 'SDX', logo: '/logos/sdx.svg' },
-  { name: 'Fnality', logo: '/logos/fnality.svg' },
+  { name: 'Dolby', logo: '/illustrations/dolby-logo-white.svg', isTextOnly: false },
+  { name: 'Nike', logo: '/illustrations/nike-logo-icon_light.svg', isTextOnly: false },
+  { name: 'Zoom', logo: '/illustrations/zoom-logo-white.svg', isTextOnly: false },
+  { name: 'Adept', isTextOnly: true },
+  { name: 'TIME', isTextOnly: true, useTimesNewRoman: true },
+  { name: 'Character.ai', isTextOnly: true },
 ];
 
 export default function Partners() {
@@ -21,15 +20,13 @@ export default function Partners() {
   return (
     <section className="py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <AnimatedSection>
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Trusted by leading financial institutions
-          </h2>
-        </AnimatedSection>
+        <h2 className="text-xl font-semibold text-center text-gray-900 mb-12">
+          Fluvosoft works with Generative AI Companies, BD Government Agencies & Enterprises
+        </h2>
         <div className="relative">
           {/* Gradient masks for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-64 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
           
           <div className="overflow-hidden">
             <motion.div
@@ -53,9 +50,24 @@ export default function Partners() {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="text-gray-400 text-lg md:text-xl lg:text-2xl font-medium whitespace-nowrap hover:text-brand-orange transition-colors duration-300">
-                    {partner.name}
-                  </div>
+                  {partner.isTextOnly ? (
+                    <div 
+                      className={`text-gray-400 text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap hover:text-brand-orange transition-colors duration-300 ${
+                        partner.useTimesNewRoman ? 'font-serif' : ''
+                      }`}
+                      style={partner.useTimesNewRoman ? { fontFamily: "'Times New Roman', Times, serif" } : {}}
+                    >
+                      {partner.name}
+                    </div>
+                  ) : partner.logo ? (
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={120}
+                      height={60}
+                      className="object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 brightness-0"
+                    />
+                  ) : null}
                 </motion.div>
               ))}
             </motion.div>

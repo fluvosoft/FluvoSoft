@@ -21,7 +21,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-poppins)', 'sans-serif'],
-        logo: ['var(--font-space-grotesk)', 'sans-serif'],
+        logo: ['var(--font-macondo)', 'sans-serif'],
+        georama: ['var(--font-georama)', 'sans-serif'],
+        inter: ['var(--font-inter)', 'sans-serif'],
       },
     },
   },

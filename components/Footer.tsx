@@ -10,12 +10,7 @@ export default function Footer() {
         <div className="bg-black rounded-2xl px-6 py-16 md:py-20 shadow-sm">
           {/* Logo and Company Name - Top Center */}
           <div className="flex flex-col items-center mb-6">
-            <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/fluvo-soft-logo.png" 
-                alt="FluvoSoft Logo" 
-                className="h-10 w-auto"
-              />
+            <div className="flex items-center mb-4">
               <h3 className="text-2xl font-bold text-white font-logo">FluvoSoft</h3>
             </div>
             

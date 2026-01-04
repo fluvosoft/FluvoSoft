@@ -49,12 +49,12 @@ export default function EvolutionSection() {
 
                 {/* Heading */}
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                  Bringing the next trillion dollars of real-world assets onchain
+                  The Old Economy is Dying. We Are Building the New One.
                 </h2>
 
                 {/* Description */}
                 <p className="text-xl text-white/90 leading-relaxed mb-8">
-                  The future of finance is open, instant, and programmable — and it lives on public blockchains.
+                  Don't just watch the next trillion-dollar wealth transfer—control it. We are moving the world's real assets on-chain, making finance instant, borderless, and programmable. The future belongs to those who build it first.
                 </p>
 
                 {/* CTA Button */}
@@ -68,9 +68,9 @@ export default function EvolutionSection() {
                     href="/fluvo-soft-lab"
                     className="inline-flex items-center gap-2 px-8 py-4 bg-brand-orange text-white rounded-lg font-semibold hover:bg-brand-orange-dark transition-colors shadow-lg"
                   >
-                    Discover FluvoSoft Lab
+                    Seize the Future
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </Link>
                 </motion.div>
@@ -350,4 +350,3 @@ export default function EvolutionSection() {
     </section>
   );
 }
-
