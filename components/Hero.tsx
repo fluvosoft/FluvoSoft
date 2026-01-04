@@ -184,7 +184,7 @@ export default function Hero() {
             ref={titleRef}
             className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 leading-tight text-center mb-6 font-georama"
           >
-            We Don't Just Write Code. We Build <span className="inline-block bg-gradient-to-r from-brand-orange via-brand-orange-light via-brand-orange to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Revenue</span>.
+            We Don&apos;t Just Write Code. We Build <span className="inline-block bg-gradient-to-r from-brand-orange via-brand-orange-light via-brand-orange to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Revenue</span>.
           </h1>
           <p
             ref={textRef}

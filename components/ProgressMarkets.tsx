@@ -24,7 +24,7 @@ export default function ProgressMarkets() {
               </p>
               
               <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Trusted by leading businesses worldwide, FluvoSoft's technology meets the highest standards of enterprise software. We empower companies with innovative solutions, expert services, and strategic guidance.
+                Trusted by leading businesses worldwide, FluvoSoft&apos;s technology meets the highest standards of enterprise software. We empower companies with innovative solutions, expert services, and strategic guidance.
               </p>
 
               <motion.a
