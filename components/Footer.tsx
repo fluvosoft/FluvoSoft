@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -11,7 +12,13 @@ export default function Footer() {
           {/* Logo and Company Name - Top Center */}
           <div className="flex flex-col items-center mb-6">
             <div className="flex items-center mb-4">
-              <h3 className="text-2xl font-bold text-white font-logo">FluvoSoft</h3>
+              <Image 
+                src="/logo.png" 
+                alt="FluvoSoft Logo"
+                width={180} 
+                height={180}
+                className="w-24 h-24 md:w-28 md:h-28 object-contain"
+              />
             </div>
             
             {/* Navigation Links with Vertical Bar */}
