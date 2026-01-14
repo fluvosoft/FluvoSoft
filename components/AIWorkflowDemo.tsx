@@ -318,7 +318,7 @@ export default function AIWorkflowDemo({ className = '' }: AIWorkflowDemoProps) 
                 <div className="flex gap-3 pt-4">
                   <motion.a
                     href="#contact"
-                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-xs shadow-lg transition-colors duration-200"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-base shadow-lg transition-colors duration-200"
                     whileHover={{ 
                       scale: 1.05, 
                       y: -2,
@@ -335,7 +335,7 @@ export default function AIWorkflowDemo({ className = '' }: AIWorkflowDemoProps) 
                   </motion.a>
                   <motion.a
                     href="#contact"
-                    className="inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-white hover:bg-gray-50 text-brand-orange border-2 border-brand-orange rounded-lg font-medium text-xs transition-colors duration-200"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 text-brand-orange border-2 border-brand-orange rounded-lg font-medium text-base transition-colors duration-200"
                     whileHover={{ 
                       scale: 1.05, 
                       y: -2,
@@ -349,7 +349,7 @@ export default function AIWorkflowDemo({ className = '' }: AIWorkflowDemoProps) 
                     }}
                   >
                     Build AI
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </motion.a>

@@ -1,240 +1,407 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+const wellnessImages = [
+  '/Agentic Solution/Wellness Assistant AI 9 (1).png',
+  '/Agentic Solution/Wellness Assistant AI 12.png',
+  '/Agentic Solution/Wellness Assistant AI 14 (1).png',
+];
 
 export default function Hero() {
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
-  const buttonsRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   useEffect(() => {
-    if (titleRef.current) {
-      gsap.fromTo(
-        titleRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1.2, ease: 'power3.out', delay: 0.2 }
-      );
-    }
-    if (textRef.current) {
-      gsap.fromTo(
-        textRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1, ease: 'power3.out', delay: 0.5 }
-      );
-    }
-    if (buttonsRef.current) {
-      gsap.fromTo(
-        buttonsRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.8 }
-      );
+    // Smooth fade-in animation on mount
+    if (containerRef.current) {
+      containerRef.current.style.opacity = '0';
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.style.transition = 'opacity 0.6s ease-in-out';
+          containerRef.current.style.opacity = '1';
+        }
+      }, 100);
     }
   }, []);
 
-  const illustrations = [
-    { src: '/illustrations/programmer.svg', word: 'Innovate' },
-    { src: '/illustrations/communication.svg', word: 'Transform' },
-    { src: '/illustrations/data-analysis.svg', word: 'Build' },
-    { src: '/illustrations/presentation.svg', word: 'Scale' },
-    { src: '/illustrations/analytics.svg', word: 'Succeed' },
-  ];
+
+  const openVideo = () => {
+    setIsVideoOpen(true);
+    // You can implement video modal here
+    console.log('Open video');
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-50 opacity-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
-        transition={{ duration: 1.5 }}
-      />
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white">
+      <div ref={containerRef} className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 w-full">
+        <div className="max-w-6xl mx-auto text-center">
+          {/* Main headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8 font-inter"
+          >
+            <span className="text-brand-orange">Transform Your Business</span>
+            <br />
+            <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+              with AI-Powered Solutions
+            </span>
+          </motion.h1>
 
-      {/* Enhanced orange shades from 4 corners */}
-      {/* Top-left corner - Soft warm glow */}
-      <motion.div
-        className="absolute top-0 left-0 w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full blur-[120px] pointer-events-none z-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: [0.4, 0.55, 0.4],
-          scale: [0.98, 1.08, 0.98],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        style={{ 
-          background: 'radial-gradient(ellipse 80% 80% at 30% 30%, rgba(255, 152, 0, 0.35) 0%, rgba(255, 111, 97, 0.25) 30%, rgba(255, 140, 90, 0.15) 60%, transparent 100%)',
-          transform: 'translate(-45%, -45%)',
-        }}
-      />
-
-      {/* Top-right corner - Vibrant orange light */}
-      <motion.div
-        className="absolute top-0 right-0 w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full blur-[120px] pointer-events-none z-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: [0.45, 0.6, 0.45],
-          scale: [0.98, 1.08, 0.98],
-        }}
-        transition={{
-          duration: 6,
-          delay: 1.2,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        style={{ 
-          background: 'radial-gradient(ellipse 80% 80% at 70% 30%, rgba(255, 107, 53, 0.4) 0%, rgba(255, 152, 0, 0.3) 25%, rgba(255, 140, 90, 0.2) 55%, transparent 100%)',
-          transform: 'translate(45%, -45%)',
-        }}
-      />
-
-      {/* Bottom-left corner - Gentle amber glow */}
-      <motion.div
-        className="absolute bottom-0 left-0 w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full blur-[120px] pointer-events-none z-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: [0.4, 0.55, 0.4],
-          scale: [0.98, 1.08, 0.98],
-        }}
-        transition={{
-          duration: 6,
-          delay: 2.4,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        style={{ 
-          background: 'radial-gradient(ellipse 80% 80% at 30% 70%, rgba(255, 183, 77, 0.35) 0%, rgba(255, 152, 0, 0.25) 30%, rgba(255, 140, 90, 0.15) 60%, transparent 100%)',
-          transform: 'translate(-45%, 45%)',
-        }}
-      />
-
-      {/* Bottom-right corner - Rich orange accent */}
-      <motion.div
-        className="absolute bottom-0 right-0 w-96 h-96 md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full blur-[120px] pointer-events-none z-0"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: [0.45, 0.6, 0.45],
-          scale: [0.98, 1.08, 0.98],
-        }}
-        transition={{
-          duration: 6,
-          delay: 3.6,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-        style={{ 
-          background: 'radial-gradient(ellipse 80% 80% at 70% 70%, rgba(229, 90, 43, 0.4) 0%, rgba(255, 107, 53, 0.3) 30%, rgba(255, 140, 90, 0.2) 60%, transparent 100%)',
-          transform: 'translate(45%, 45%)',
-        }}
-      />
-
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          {/* Illustrations row */}
-          <div className="flex items-center justify-center gap-2 md:gap-4 lg:gap-6 mb-6 flex-wrap">
-            {illustrations.map((item, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col items-center gap-3"
-                initial={{ opacity: 0, y: -30, scale: 0.9 }}
-                animate={{ 
-                  opacity: 1,
-                  y: [0, -15, 0],
-                  scale: 1
-                }}
-                transition={{ 
-                  opacity: { duration: 0.8, delay: 0.3 + index * 0.1, ease: 'easeOut' },
-                  y: {
-                    duration: 3,
-                    delay: 1 + index * 0.2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  },
-                  scale: { duration: 0.8, delay: 0.3 + index * 0.1, ease: 'easeOut' }
-                }}
-              >
-                {/* Vector Illustration */}
-                <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48">
-                  <img
-                    src={item.src}
-                    alt={`Professional illustration ${index + 1}`}
-                    className="w-full h-full object-contain brightness-0"
-                    style={{ filter: 'brightness(0)' }}
-                  />
-                </div>
-                
-                {/* Curved Word Card */}
-                <motion.div
-                  className="bg-white rounded-xl px-4 py-2 shadow-lg border border-gray-200"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2)' }}
+          {/* Description text */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-base sm:text-lg md:text-xl text-black mb-4 max-w-4xl mx-auto leading-relaxed font-inter"
+          >
+            Test, Develop and Deploy all your AI models in one place, with FluvoSoft seamless playground interface
+          </motion.div>
+          
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+          >
+            {/* Watch Video Button */}
+            <button
+              onClick={openVideo}
+              className="group relative w-[170px] max-lg:w-[160px] rounded-xl py-4 max-lg:py-2 flex items-center justify-center gap-2 bg-transparent text-gray-900 transition-colors duration-300 border-2 border-gray-900 hover:border-brand-orange hover:text-brand-orange"
+            >
+              <div className="relative flex items-center justify-center w-6 h-6">
+                <div className="absolute inset-0 top-0 left-0 scale-0 duration-300 group-hover:scale-100 border-2 border-brand-orange rounded-full w-full h-full"></div>
+                <svg 
+                  className="w-6 h-6" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
                 >
-                  <span className="text-sm md:text-base font-semibold text-gray-900">{item.word}</span>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+              </div>
+              <span className="font-medium">Watch video</span>
+            </button>
 
-          {/* Title */}
-          <h1
-            ref={titleRef}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-gray-900 leading-tight text-center mb-6 font-georama"
-          >
-            We Don&apos;t Just Write Code. We Build <span className="inline-block bg-gradient-to-r from-brand-orange via-brand-orange-light via-brand-orange to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Revenue</span>.
-          </h1>
-          <p
-            ref={textRef}
-            className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed max-w-3xl mx-auto text-center"
-          >
-            We bridge the gap between human innovation and digital reality. Fluvosoft is the venture studio that transforms raw concepts into automated, blockchain-secured ecosystems.
-          </p>
-          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
-              href="#solutions"
-              className="px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-semibold shadow-lg relative overflow-hidden transition-colors duration-200"
-              whileHover={{ 
-                scale: 1.05, 
-                y: -3,
-                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)'
-              }}
-              whileTap={{ scale: 0.97, y: 0 }}
-              transition={{ 
-                type: "spring", 
-                stiffness: 400, 
-                damping: 17,
-                boxShadow: { duration: 0.2 }
-              }}
+            {/* Get Started Button */}
+            <Link
+              href="/contact"
+              className="group w-[170px] max-lg:w-[160px] flex items-center justify-center gap-2 shadow-lg rounded-xl py-4 max-lg:py-2 transition-transform duration-300 hover:scale-[1.03] bg-brand-orange text-white font-medium"
             >
-              <span className="relative z-10">Partner With Us →
-
-</span>
-            </motion.a>
-            <motion.a
-              href="#contact"
-              className="px-8 py-4 bg-white hover:bg-orange-50 text-brand-orange border-2 border-brand-orange rounded-lg font-semibold relative overflow-hidden transition-colors duration-200"
-              whileHover={{ 
-                scale: 1.05, 
-                y: -3,
-                boxShadow: '0 10px 15px -3px rgba(249, 115, 22, 0.2), 0 4px 6px -2px rgba(249, 115, 22, 0.1)'
-              }}
-              whileTap={{ scale: 0.97, y: 0 }}
-              transition={{ 
-                type: "spring", 
-                stiffness: 400, 
-                damping: 17,
-                boxShadow: { duration: 0.2 }
-              }}
-            >
-              <span className="relative z-10">Fix an Appointment</span>
-            </motion.a>
-          </div>
+              <span>Get started</span>
+              <svg 
+                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </motion.div>
         </div>
+        
+        {/* Wellness Assistant Images - Static Layout */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="relative mt-8 flex w-full items-center justify-center"
+        >
+          {/* Purple gradient background element */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-[5%] h-[200px] w-[200px] bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-blue-500/30 rounded-full blur-3xl"></div>
+
+          {/* Images Container */}
+          <div className="relative w-full max-w-[95%] lg:max-w-[1400px] h-[600px] lg:h-[700px] flex items-center justify-center">
+            {/* Left Image - Small, Background */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="absolute left-0 lg:left-4 w-[45%] lg:w-[550px] h-[65%] lg:h-[580px] z-0"
+            >
+              <Image
+                src={wellnessImages[0]}
+                alt="Wellness Assistant AI 1"
+                fill
+                className="object-contain opacity-85"
+                sizes="(max-width: 768px) 300px, 550px"
+              />
+            </motion.div>
+
+            {/* Middle Image - Big, Foreground */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="relative w-[90%] lg:w-[800px] h-[80%] lg:h-[650px] z-10"
+            >
+              <Image
+                src={wellnessImages[1]}
+                alt="Wellness Assistant AI 2"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+                sizes="(max-width: 768px) 90vw, 800px"
+              />
+              
+              {/* Analysis Overlay with Animated Graphs */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Top Analysis Bar with Animated Progress */}
+                <motion.div 
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1 }}
+                  className="absolute top-4 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-4 py-3 border border-gray-200/50 shadow-lg z-20"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-3">
+                      <motion.div 
+                        className="w-2 h-2 rounded-full bg-green-500"
+                        animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                      <span className="text-gray-900 text-sm font-medium">Real-time Analysis</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-gray-600 text-sm">98% Accuracy</span>
+                      <div className="w-1 h-1 rounded-full bg-gray-400 animate-pulse"></div>
+                    </div>
+                  </div>
+                  {/* Animated Progress Bar */}
+                  <div className="h-1.5 bg-gray-200/80 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-brand-orange to-green-500 rounded-full"
+                      initial={{ width: 0 }}
+                      animate={{ width: "98%" }}
+                      transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}
+                    />
+                  </div>
+                </motion.div>
+
+                {/* Bottom Analysis Panel with Animated Charts */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1.6 }}
+                  className="absolute bottom-2 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-5 py-4 border border-gray-200/50 shadow-lg z-20"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <h4 className="text-gray-900 text-base font-semibold">Diagnostic Analysis</h4>
+                    <motion.span 
+                      className="text-green-600 text-sm flex items-center gap-1.5 font-medium"
+                      animate={{ opacity: [1, 0.5, 1] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Verified
+                    </motion.span>
+                  </div>
+                  
+                  {/* Animated Bar Chart */}
+                  <div className="grid grid-cols-3 gap-3 mb-4">
+                    <div className="bg-gray-100/80 rounded-lg px-3 py-3 border border-gray-200/50">
+                      <div className="text-gray-600 text-xs mb-2 font-medium">Confidence</div>
+                      <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
+                        <motion.div
+                          className="h-full bg-gradient-to-r from-brand-orange to-orange-400 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: "98%" }}
+                          transition={{ duration: 1.5, delay: 1.8, ease: "easeOut" }}
+                        />
+                      </div>
+                      <motion.div 
+                        className="text-gray-900 text-sm font-bold"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 2 }}
+                      >
+                        98%
+                      </motion.div>
+                    </div>
+                    <div className="bg-gray-100/80 rounded-lg px-3 py-3 border border-gray-200/50">
+                      <div className="text-gray-600 text-xs mb-2 font-medium">Status</div>
+                      <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
+                        <motion.div
+                          className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: "95%" }}
+                          transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
+                        />
+                      </div>
+                      <motion.div 
+                        className="text-gray-900 text-sm font-bold"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 2.2 }}
+                      >
+                        95%
+                      </motion.div>
+                    </div>
+                    <div className="bg-gray-100/80 rounded-lg px-3 py-3 border border-gray-200/50">
+                      <div className="text-gray-600 text-xs mb-2 font-medium">Score</div>
+                      <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
+                        <motion.div
+                          className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
+                          initial={{ width: 0 }}
+                          animate={{ width: "98%" }}
+                          transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
+                        />
+                      </div>
+                      <motion.div 
+                        className="text-gray-900 text-sm font-bold"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 2.4 }}
+                      >
+                        98%
+                      </motion.div>
+                    </div>
+                  </div>
+
+                  {/* Animated Metrics - Professional */}
+                  <div className="flex gap-3">
+                    <motion.div
+                      className="flex-1 bg-gray-100/60 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-200/50"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 2.2 }}
+                    >
+                      <div className="w-7 h-7 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="text-gray-600 text-[10px] font-medium uppercase tracking-wide">Data Points</div>
+                        <div className="text-gray-900 text-sm font-bold">1,247</div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className="flex-1 bg-gray-100/60 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-200/50"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 2.3 }}
+                    >
+                      <div className="w-7 h-7 rounded-lg bg-green-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="text-gray-600 text-[10px] font-medium uppercase tracking-wide">Speed</div>
+                        <div className="text-gray-900 text-sm font-bold">0.32s</div>
+                      </div>
+                    </motion.div>
+                    <motion.div
+                      className="flex-1 bg-gray-100/60 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-200/50"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 2.4 }}
+                    >
+                      <div className="w-7 h-7 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="text-gray-600 text-[10px] font-medium uppercase tracking-wide">Precision</div>
+                        <div className="text-gray-900 text-sm font-bold">99.2%</div>
+                      </div>
+                    </motion.div>
+                  </div>
+                </motion.div>
+
+                {/* Side Analysis Indicators with Pulse Animation */}
+                <div className="absolute top-1/2 left-2 -translate-y-1/2 flex flex-col gap-3 z-20">
+                  <motion.div
+                    className="bg-brand-orange/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      boxShadow: [
+                        "0 10px 25px rgba(0,0,0,0.3)",
+                        "0 15px 35px rgba(255, 107, 53, 0.5)",
+                        "0 10px 25px rgba(0,0,0,0.3)"
+                      ]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </motion.div>
+                  <motion.div
+                    className="bg-blue-500/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      boxShadow: [
+                        "0 10px 25px rgba(0,0,0,0.3)",
+                        "0 15px 35px rgba(59, 130, 246, 0.5)",
+                        "0 10px 25px rgba(0,0,0,0.3)"
+                      ]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </motion.div>
+                </div>
+
+                <div className="absolute top-1/2 right-2 -translate-y-1/2 flex flex-col gap-3 z-20">
+                  <motion.div
+                    className="bg-purple-500/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 5, -5, 0]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0 }}
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </motion.div>
+                  <motion.div
+                    className="bg-green-500/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      rotate: [0, -5, 5, 0]
+                    }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                  >
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </motion.div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Image - Small, Background */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="absolute right-0 lg:right-4 w-[45%] lg:w-[550px] h-[65%] lg:h-[580px] z-0"
+            >
+              <Image
+                src={wellnessImages[2]}
+                alt="Wellness Assistant AI 3"
+                fill
+                className="object-contain opacity-85"
+                sizes="(max-width: 768px) 300px, 550px"
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 }
-

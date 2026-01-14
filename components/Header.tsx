@@ -20,25 +20,24 @@ export default function Header() {
   return (
     <header className="bg-transparent w-full relative z-50">
       <nav className="w-full relative">
-        <div className="relative flex items-center justify-between bg-brand-orange px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-2.5 md:py-3">
+        <div className="relative flex items-center justify-between bg-brand-orange px-4 sm:px-6 md:px-8 lg:px-12 py-1">
           <Link href="/" className="flex items-center gap-1 sm:gap-1.5 z-10">
             <Image 
-              src="/illustrations/fluvo_logo.png" 
-              alt="FluvoSoft Logo" 
-              width={60} 
-              height={60}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[60px] lg:h-[60px] object-contain"
+              src="/logo.png" 
+              alt="FluvoSoft Logo"
+              width={180} 
+              height={180}
+              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain"
             />
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-white font-logo whitespace-nowrap">FluvoSoft</span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden lg:flex items-center space-x-2 xl:space-x-3 absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
+            <Link href="/" className="px-3 xl:px-4 py-1 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               Home
             </Link>
             <div className="relative group">
-              <button className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter flex items-center transition-colors rounded-xl text-sm xl:text-base">
+              <button className="px-3 xl:px-4 py-1 text-white hover:text-brand-orange-light font-medium font-inter flex items-center transition-colors rounded-xl text-sm xl:text-base">
                 What we do
                 <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -59,22 +58,22 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-            <Link href="/solutions" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
+            <Link href="/solutions" className="px-3 xl:px-4 py-1 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               Solutions
             </Link>
-            <Link href="/resources" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
+            <Link href="/resources" className="px-3 xl:px-4 py-1 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               Resources
             </Link>
-            <Link href="/about" className="px-3 xl:px-4 py-2 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
+            <Link href="/about" className="px-3 xl:px-4 py-1 text-white hover:text-brand-orange-light font-medium font-inter transition-colors rounded-xl text-sm xl:text-base">
               About
             </Link>
           </div>
 
           {/* CTA Button - Right */}
           <div className="hidden lg:block z-10">
-            <Link href="/contact" className="px-4 xl:px-5 py-2 xl:py-2.5 bg-brand-orange-dark text-white font-medium font-inter transition-colors rounded-xl hover:bg-brand-orange-light inline-flex items-center gap-1 text-sm xl:text-base">
+            <Link href="/contact" className="px-6 xl:px-7 py-2.5 xl:py-3 bg-brand-orange-dark text-white font-medium font-inter transition-colors rounded-xl hover:bg-brand-orange-light inline-flex items-center gap-2 text-base xl:text-lg">
               Book a Demo
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
@@ -175,11 +174,11 @@ export default function Header() {
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="block py-2.5 px-5 bg-brand-orange-dark text-white rounded-xl mt-3 hover:bg-brand-orange-light font-inter transition-colors inline-flex items-center gap-1 text-base"
+                  className="block py-3 px-6 bg-brand-orange-dark text-white rounded-xl mt-3 hover:bg-brand-orange-light font-inter transition-colors inline-flex items-center gap-2 text-lg font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Book a Demo
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </Link>

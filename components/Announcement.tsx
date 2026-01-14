@@ -11,7 +11,7 @@ export default function Announcement() {
         <div className="flex items-center justify-center gap-3">
           <div className="flex items-center gap-2">
             <Image 
-              src="/illustrations/fluvo_logo.png" 
+              src="/logo.png" 
               alt="FluvoSoft Logo" 
               width={24} 
               height={24}

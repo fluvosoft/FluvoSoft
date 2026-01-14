@@ -1,15 +1,42 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 import AnimatedSection from './AnimatedSection';
+import Image from 'next/image';
 
 interface AIForEnterpriseProps {
   className?: string;
 }
 
+type ImageType = 'default' | 'rlhf' | 'foundation-models' | 'data-engine';
+
+const imageMap: Record<ImageType, { src: string; alt: string }> = {
+  'default': {
+    src: '/Scale elements/whole-model.webp',
+    alt: 'Complete AI model'
+  },
+  'rlhf': {
+    src: '/Scale elements/rlhf.webp',
+    alt: 'RLHF layer from data model'
+  },
+  'foundation-models': {
+    src: '/Scale elements/foundation-models.webp',
+    alt: 'Foundation models layer from data model'
+  },
+  'data-engine': {
+    src: '/Scale elements/data-engine.webp',
+    alt: 'Data Engine layer from data model'
+  }
+};
+
 export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps) {
+  const [hoveredImage, setHoveredImage] = useState<ImageType | null>(null);
+  
+  const currentImage: ImageType = hoveredImage || 'default';
+
   return (
-    <section className={`py-16 bg-gray-50 ${className}`}>
+    <section className={`py-18 lg:py-20 bg-white relative ${className}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
@@ -26,12 +53,102 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
               Outcomes delivered with world-class data, models, agents, and deployment.
             </p>
           </AnimatedSection>
-          
+
+          {/* Content and Image Section */}
           <AnimatedSection delay={0.4}>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Left Side - Text Content */}
+              <div className="space-y-8 text-left">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  onMouseEnter={() => setHoveredImage('rlhf')}
+                  onMouseLeave={() => setHoveredImage(null)}
+                  className="space-y-3 text-left w-full cursor-pointer"
+                >
+                  <h4 className={`text-2xl font-bold transition-colors ${
+                    hoveredImage === 'rlhf' ? 'text-brand-orange' : 'text-gray-900'
+                  }`}>
+                    Fine-Tuning and RLHF
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  onMouseEnter={() => setHoveredImage('foundation-models')}
+                  onMouseLeave={() => setHoveredImage(null)}
+                  className="space-y-3 text-left w-full cursor-pointer"
+                >
+                  <h4 className={`text-2xl font-bold transition-colors ${
+                    hoveredImage === 'foundation-models' ? 'text-brand-orange' : 'text-gray-900'
+                  }`}>
+                    Foundation Models
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    Scale partners or integrates with all of the leading AI models, from open-source to closed-source, including Google, Meta, Cohere, and more.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  onMouseEnter={() => setHoveredImage('data-engine')}
+                  onMouseLeave={() => setHoveredImage(null)}
+                  className="space-y-3 text-left w-full cursor-pointer"
+                >
+                  <h4 className={`text-2xl font-bold transition-colors ${
+                    hoveredImage === 'data-engine' ? 'text-brand-orange' : 'text-gray-900'
+                  }`}>
+                    Enterprise Data
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    Scale's Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation.
+                  </p>
+                </motion.div>
+              </div>
+
+              {/* Right Side - Image Display */}
+              <div className="flex flex-col justify-center items-center relative">
+                <div className="w-full h-[590px] flex items-center justify-center relative">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentImage}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                      className="w-full h-full flex items-center justify-center"
+                    >
+                      <Image
+                        src={imageMap[currentImage].src}
+                        alt={imageMap[currentImage].alt}
+                        width={600}
+                        height={500}
+                        className="object-contain w-full h-auto max-w-full"
+                        loading="lazy"
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.6}>
             <div className="flex justify-center">
               <motion.a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-sm shadow-lg transition-colors duration-200"
+                className="inline-flex items-center gap-2.5 px-8 py-4 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-base shadow-lg transition-colors duration-200"
                 whileHover={{ 
                   scale: 1.05, 
                   y: -3,
@@ -45,7 +162,7 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
                 }}
               >
                 Book a Demo
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </motion.a>
