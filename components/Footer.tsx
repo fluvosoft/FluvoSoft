@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="bg-black rounded-2xl px-6 py-16 md:py-20 shadow-sm">
           {/* Logo and Company Name - Top Center */}
           <div className="flex flex-col items-center mb-6">
-            <div className="flex items-center mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <Image 
                 src="/logo.png" 
                 alt="FluvoSoft Logo"
@@ -19,6 +19,10 @@ export default function Footer() {
                 height={180}
                 className="w-24 h-24 md:w-28 md:h-28 object-contain"
               />
+              <span className="text-white text-2xl md:text-3xl font-inter">
+                <span className="font-bold">Fluvo</span>
+                <span className="font-normal">Soft</span>
+              </span>
             </div>
             
             {/* Navigation Links with Vertical Bar */}

@@ -21,7 +21,7 @@ export default function Header() {
     <header className="bg-transparent w-full relative z-50">
       <nav className="w-full relative">
         <div className="relative flex items-center justify-between bg-brand-orange px-4 sm:px-6 md:px-8 lg:px-12 py-1">
-          <Link href="/" className="flex items-center gap-1 sm:gap-1.5 z-10">
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 z-10">
             <Image 
               src="/logo.png" 
               alt="FluvoSoft Logo"
@@ -29,6 +29,10 @@ export default function Header() {
               height={180}
               className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain"
             />
+            <span className="text-white text-lg sm:text-xl md:text-2xl lg:text-2xl font-inter">
+              <span className="font-bold">Fluvo</span>
+              <span className="font-normal">Soft</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation - Centered */}
