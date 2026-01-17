@@ -44,7 +44,7 @@ export default function AboutPage() {
                   We started as a small team who love technology. Today, we work with over 50 companies around the world. We build AI tools, blockchain apps, and custom software. Our focus on doing great work and helping clients succeed makes us a trusted choice for businesses looking for technology solutions.
                 </p>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  From startups to enterprise companies, we've helped businesses transform their operations with innovative technology solutions. Our commitment to excellence and client success drives everything we do.
+                  From startups to enterprise companies, we&apos;ve helped businesses transform their operations with innovative technology solutions. Our commitment to excellence and client success drives everything we do.
                 </p>
               </div>
             </motion.div>
@@ -281,7 +281,7 @@ export default function AboutPage() {
               Ready to Work Together?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Let's discuss how we can help transform your business with innovative technology solutions.
+              Let&apos;s discuss how we can help transform your business with innovative technology solutions.
             </p>
             <a
               href="/contact"

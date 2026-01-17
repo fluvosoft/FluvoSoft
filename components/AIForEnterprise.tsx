@@ -112,7 +112,7 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
                     Enterprise Data
                   </h4>
                   <p className="text-gray-600 leading-relaxed">
-                    Scale's Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation.
+                    Scale&apos;s Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation.
                   </p>
                 </motion.div>
               </div>
