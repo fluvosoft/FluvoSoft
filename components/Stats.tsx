@@ -2,7 +2,6 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import Image from 'next/image';
 
 const stats = [
   { 
@@ -70,23 +69,9 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-10 text-white relative overflow-hidden">
-      {/* Background GIF */}
-      <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="/Agentic Solution/matrics_background_fluvosoft.gif"
-          alt="Background animation"
-          fill
-          className="object-cover"
-          priority
-          unoptimized
-        />
-      </div>
-      {/* Black Overlay with 40% opacity */}
-      <div className="absolute inset-0 bg-black/40 z-[1]" />
-      
+    <section className="py-10 text-white bg-black">
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-[2]">
+      <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
