@@ -7,18 +7,74 @@ export default function EvolutionSection() {
   return (
     <section className="bg-white">
       {/* Top Section - Quote */}
-      <div className="py-16 bg-white">
+      <div className="py-18 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl">
-            <motion.p
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-left"
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="relative p-8 md:p-12 lg:p-16 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              FluvoSoft is supporting the evolution of digital financial markets through openness, collaboration and trust.
-            </motion.p>
+              {/* Decorative Background Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-brand-orange/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+              
+              {/* Quote Icon */}
+              <motion.div
+                className="absolute top-8 left-8 text-brand-orange/20"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <svg className="w-16 h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </motion.div>
+
+              {/* Main Quote Content */}
+              <div className="relative z-10 pl-8 md:pl-12 lg:pl-16">
+                <motion.div
+                  className="space-y-4"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                >
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-relaxed">
+                    <span className="text-brand-orange font-semibold">FluvoSoft</span> is supporting the evolution of digital financial markets through{' '}
+                    <span className="inline-block bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent font-semibold">
+                      openness
+                    </span>
+                    ,{' '}
+                    <span className="inline-block bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent font-semibold">
+                      collaboration
+                    </span>
+                    {' '}and{' '}
+                    <span className="inline-block bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent font-semibold">
+                      trust
+                    </span>
+                    .
+                  </p>
+                </motion.div>
+
+                {/* Decorative Elements */}
+                <motion.div
+                  className="flex items-center gap-2 mt-8"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                  <div className="h-px w-12 bg-brand-orange" />
+                  <div className="h-2 w-2 rounded-full bg-brand-orange" />
+                  <div className="h-px w-8 bg-gray-300" />
+                  <span className="text-sm text-gray-500 font-medium">Our Commitment</span>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -48,12 +104,12 @@ export default function EvolutionSection() {
                 </motion.div>
 
                 {/* Heading */}
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6">
                   The Old Economy is Dying. We Are Building the New One.
                 </h2>
 
                 {/* Description */}
-                <p className="text-xl text-white/90 leading-relaxed mb-8">
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
                   Don&apos;t just watch the next trillion-dollar wealth transfer—control it. We are moving the world&apos;s real assets on-chain, making finance instant, borderless, and programmable. The future belongs to those who build it first.
                 </p>
 
