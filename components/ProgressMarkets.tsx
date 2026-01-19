@@ -1,74 +1,141 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 export default function ProgressMarkets() {
+  const gridItems = [
+    {
+      title: 'Blockchain Infrastructure',
+      description: 'Scalable and secure blockchain solutions for enterprise needs.',
+    },
+    {
+      title: 'Smart Contracts',
+      description: 'Automated and transparent contract execution on-chain.',
+    },
+    {
+      title: 'Tokenization',
+      description: 'Transform assets into digital tokens with ease.',
+    },
+    {
+      title: 'Decentralized Networks',
+      description: 'Build robust decentralized applications and systems.',
+    },
+  ];
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-18 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Our focus is progressing markets
-              </h2>
-              
-              <p className="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
-                Effectively deploying enterprise solutions requires a deep knowledge of business operations, technology implementation, practical workflows, and industry best practices.
-              </p>
-              
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Trusted by leading businesses worldwide, FluvoSoft&apos;s technology meets the highest standards of enterprise software. We empower companies with innovative solutions, expert services, and strategic guidance.
-              </p>
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Image (1 col) */}
+            <AnimatedSection delay={0.2}>
+              <div className="flex items-center justify-center">
+                <div className="w-full relative">
+                  <Image
+                    src="/Agentic Solution/fluvosot_blockchain_solution.png"
+                    alt="FluvoSoft Blockchain Solution"
+                    width={600}
+                    height={600}
+                    className="w-full h-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </AnimatedSection>
 
-              <motion.a
-                href="#contact"
-                className="inline-block px-8 py-4 bg-brand-orange text-white rounded-lg font-semibold shadow-lg"
-                whileHover={{ 
-                  scale: 1.05, 
-                  y: -3,
-                  boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)'
-                }}
-                whileTap={{ scale: 0.97, y: 0 }}
-                transition={{ 
-                  type: "spring", 
-                  stiffness: 400, 
-                  damping: 17,
-                }}
-              >
-                Request a demo →
-              </motion.a>
-            </motion.div>
+            {/* Right Column - Content (2 cols) */}
+            <AnimatedSection delay={0.4} className="lg:col-span-2">
+              <div className="space-y-6">
+                {/* Small On-Chain Button */}
+                <motion.button
+                  className="px-4 py-2 bg-brand-orange text-white rounded-lg text-sm font-medium inline-block"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
+                  On-Chain
+                </motion.button>
 
-            {/* Right Column - Illustration */}
-            <motion.div
-              className="relative w-full flex items-center justify-center"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="w-full max-w-lg"
-              >
-                <img
-                  src="/illustrations/ai-collaboration.svg"
-                  alt="AI Collaboration - Technology and Innovation"
-                  className="w-full h-auto object-contain brightness-0"
-                  style={{ filter: 'brightness(0)' }}
-                />
-              </motion.div>
-            </motion.div>
+                {/* Title */}
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
+                  Our focus is progressing markets
+                </h2>
+
+                {/* Paragraph */}
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+                  Effectively deploying enterprise solutions requires a deep knowledge of business operations, technology implementation, practical workflows, and industry best practices.
+                </p>
+
+                {/* Subtitle */}
+                <h3 className="text-2xl font-bold text-gray-900 pt-4">
+                  Enterprise Blockchain Solutions
+                </h3>
+
+                {/* Grid Section with 2 cols */}
+                <div className="grid grid-cols-2 gap-6 pt-4">
+                  {gridItems.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="space-y-2"
+                    >
+                      <h4 className="text-lg font-bold text-gray-900">
+                        {item.title}
+                      </h4>
+                      <p className="text-base text-gray-600 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="flex flex-wrap gap-4 pt-6">
+                  <motion.a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-sm shadow-lg transition-colors duration-200"
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -3,
+                      boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2)'
+                    }}
+                    whileTap={{ scale: 0.97, y: 0 }}
+                    transition={{ 
+                      type: "spring", 
+                      stiffness: 400, 
+                      damping: 17,
+                    }}
+                  >
+                    Get Started
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </motion.a>
+                  <motion.a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 bg-white hover:bg-gray-50 text-brand-orange border-2 border-brand-orange rounded-lg font-medium text-sm transition-colors duration-200"
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -3,
+                      boxShadow: '0 10px 15px -3px rgba(249, 115, 22, 0.2), 0 4px 6px -2px rgba(249, 115, 22, 0.1)'
+                    }}
+                    whileTap={{ scale: 0.97, y: 0 }}
+                    transition={{ 
+                      type: "spring", 
+                      stiffness: 400, 
+                      damping: 17,
+                    }}
+                  >
+                    Learn More
+                  </motion.a>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </div>
