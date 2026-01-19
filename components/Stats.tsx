@@ -51,17 +51,17 @@ export default function Stats() {
               key={index}
               variants={itemVariants}
               className="text-center"
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
             >
               <motion.div
-                className="text-4xl md:text-5xl font-bold mb-2"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 {stat.number}
               </motion.div>
-              <div className="text-lg text-orange-100">{stat.label}</div>
+              <div className="text-base md:text-lg text-white/90 leading-relaxed font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
