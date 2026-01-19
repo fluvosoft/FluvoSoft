@@ -119,7 +119,7 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
 
               {/* Right Side - Image Display */}
               <div className="flex flex-col justify-center items-center relative">
-                <div className="w-full h-[590px] flex items-center justify-center relative">
+                <div className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[590px] flex items-center justify-center relative">
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={currentImage}

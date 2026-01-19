@@ -297,7 +297,7 @@ export default function AIWorkflowDemo({ className = '' }: AIWorkflowDemoProps) 
           </div>
 
           {/* Grid Layout */}
-          <div className="grid md:grid-cols-[5fr_3fr] gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-[5fr_3fr] gap-8 md:gap-12 items-center">
             {/* Left Side - Chat Animation */}
             <AnimatedSection delay={0.6} direction="right">
               <ChatAnimation />
@@ -305,20 +305,20 @@ export default function AIWorkflowDemo({ className = '' }: AIWorkflowDemoProps) 
 
             {/* Right Side - Content */}
             <AnimatedSection delay={0.8} direction="left">
-              <div className="space-y-6">
-                <h4 className="text-2xl md:text-3xl font-bold text-gray-900">
+              <div className="space-y-4 md:space-y-6">
+                <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                   Generative AI
                 </h4>
-                <h5 className="text-xl md:text-2xl font-medium text-gray-700">
+                <h5 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-700">
                   Powering the next generation of Generative AI
                 </h5>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                   Scale Generative AI Data Engine powers many of the most advanced LLMs and generative models in the world through world-class RLHF, data generation, model evaluation, safety, and alignment.
                 </p>
-                <div className="flex gap-3 pt-4">
+                <div className="flex flex-col sm:flex-row gap-3 pt-4">
                   <motion.a
                     href="#contact"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-base shadow-lg transition-colors duration-200"
+                    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-brand-orange hover:bg-brand-orange-dark text-white rounded-lg font-medium text-sm sm:text-base shadow-lg transition-colors duration-200"
                     whileHover={{ 
                       scale: 1.05, 
                       y: -2,
@@ -335,7 +335,7 @@ export default function AIWorkflowDemo({ className = '' }: AIWorkflowDemoProps) 
                   </motion.a>
                   <motion.a
                     href="#contact"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 text-brand-orange border-2 border-brand-orange rounded-lg font-medium text-base transition-colors duration-200"
+                    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-white hover:bg-gray-50 text-brand-orange border-2 border-brand-orange rounded-lg font-medium text-sm sm:text-base transition-colors duration-200"
                     whileHover={{ 
                       scale: 1.05, 
                       y: -2,

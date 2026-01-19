@@ -23,19 +23,19 @@ export default function EvolutionSection() {
               
               {/* Quote Icon */}
               <motion.div
-                className="absolute top-8 left-8 text-brand-orange/20"
+                className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 text-brand-orange/20"
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <svg className="w-16 h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.984zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                 </svg>
               </motion.div>
 
               {/* Main Quote Content */}
-              <div className="relative z-10 pl-8 md:pl-12 lg:pl-16">
+              <div className="relative z-10 pl-0 sm:pl-12 md:pl-16 pt-12 sm:pt-0">
                 <motion.div
                   className="space-y-4"
                   initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ export default function EvolutionSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  <p className="text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-relaxed">
+                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-relaxed">
                     <span className="text-brand-orange font-semibold">FluvoSoft</span> is supporting the evolution of digital financial markets through{' '}
                     <span className="inline-block bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent font-semibold">
                       openness
@@ -134,7 +134,7 @@ export default function EvolutionSection() {
 
               {/* Right Column - Network Graphic */}
               <motion.div
-                className="relative w-full h-[500px] flex items-center justify-center"
+                className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] flex items-center justify-center mt-8 md:mt-0"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
