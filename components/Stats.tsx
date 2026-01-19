@@ -89,7 +89,7 @@ export default function Stats() {
       <div className="container mx-auto px-4 relative z-[2]">
         <motion.div
           ref={ref}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
@@ -98,22 +98,24 @@ export default function Stats() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="text-center p-4 md:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              className="text-center p-3 sm:p-4 md:p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               whileHover={{ scale: 1.05, y: -5 }}
             >
               {/* Icon */}
               <motion.div
-                className="flex justify-center mb-3 text-white/90"
+                className="flex justify-center mb-2 sm:mb-3 text-white/90"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: index * 0.1 + 0.2, duration: 0.5, type: "spring" }}
               >
-                {stat.icon}
+                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8">
+                  {stat.icon}
+                </div>
               </motion.div>
               
               {/* Number */}
               <motion.div
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1.5 text-white"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-1 sm:mb-1.5 text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
@@ -123,7 +125,7 @@ export default function Stats() {
               
               {/* Label */}
               <motion.div 
-                className="text-sm md:text-base text-white/80 leading-relaxed font-medium"
+                className="text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-medium"
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}

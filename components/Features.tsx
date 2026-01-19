@@ -59,21 +59,21 @@ export default function Features() {
           </div>
 
           {/* Grid Section */}
-          <div className="max-w-7xl mx-auto grid grid-cols-2 gap-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {/* First Card */}
             <AnimatedSection delay={0.6}>
               <div>
                 {/* Text Content */}
-                <div className="mb-6">
-                  <h4 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                <div className="mb-4 md:mb-6">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 md:mb-3">
                     Defense & Intelligence
                   </h4>
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Orchestrate agent workflows for decision advantage. Transform complex data into actionable intelligence with advanced AI agents.
                   </p>
                 </div>
                 {/* Image with gap from top and left only */}
-                <div className="mt-8 pl-8">
+                <div className="mt-6 md:mt-8 pl-0 sm:pl-4 md:pl-8">
                   <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
                     <img 
                       src="/Agentic Solution/donovan.png" 
@@ -89,16 +89,16 @@ export default function Features() {
             <AnimatedSection delay={0.8}>
               <div>
                 {/* Text Content */}
-                <div className="mb-6">
-                  <h4 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                <div className="mb-4 md:mb-6">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 md:mb-3">
                     Enterprise Solutions
                   </h4>
-                  <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                     Deploy intelligent agents that automate workflows and enhance productivity across your organization with continuous learning.
                   </p>
                 </div>
                 {/* Image with gap from top and left only */}
-                <div className="mt-8 pl-8">
+                <div className="mt-6 md:mt-8 pl-0 sm:pl-4 md:pl-8">
                   <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
                     <img 
                       src="/Agentic Solution/gen-ai.png" 
