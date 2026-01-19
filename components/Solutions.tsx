@@ -35,7 +35,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="py-20 bg-white">
+    <section id="solutions" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-[2fr_3fr] gap-20 items-start">
@@ -48,12 +48,12 @@ export default function Solutions() {
               className="space-y-10 max-w-xl ml-auto"
             >
               {/* Heading */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight whitespace-nowrap">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight whitespace-nowrap">
                 Our <span className="text-brand-orange">Solutions.</span>
               </h2>
 
               {/* Description */}
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Innovative technology solutions to help your business grow and succeed. We deliver cutting-edge software that transforms operations and drives success.
               </p>
 
@@ -87,14 +87,14 @@ export default function Solutions() {
               {/* Read More Button */}
               <motion.a
                 href="#solutions-detail"
-                className="inline-flex items-center gap-3 px-6 py-4 bg-brand-orange text-white rounded-xl font-semibold hover:bg-brand-orange-dark transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 px-6 py-2.5 bg-brand-orange text-white rounded-lg font-medium text-sm hover:bg-brand-orange-dark transition-colors shadow-lg"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: 'spring', stiffness: 400 }}
               >
                 Read more
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
                   </svg>
                 </div>
