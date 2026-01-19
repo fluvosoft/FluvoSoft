@@ -71,7 +71,7 @@ export default function DigitalFuture() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">
                 Challenges in regulated markets
               </h2>
               <ul className="space-y-6">
@@ -87,7 +87,7 @@ export default function DigitalFuture() {
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-gray-700">
                       {challenge.icon}
                     </div>
-                    <span className="text-lg text-gray-700 pt-2">{challenge.text}</span>
+                    <span className="text-lg text-gray-600 pt-2">{challenge.text}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -179,7 +179,7 @@ export default function DigitalFuture() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">
                 A FluvoSoft-enabled digital future
               </h2>
               <ul className="space-y-6">
@@ -195,7 +195,7 @@ export default function DigitalFuture() {
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-orange/10 flex items-center justify-center text-brand-orange">
                       {solution.icon}
                     </div>
-                    <span className="text-lg text-gray-700 pt-2">{solution.text}</span>
+                    <span className="text-lg text-gray-600 pt-2">{solution.text}</span>
                   </motion.li>
                 ))}
               </ul>
