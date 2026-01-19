@@ -35,20 +35,20 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="py-20 bg-gray-50">
+    <section id="solutions" className="py-12 md:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-[2fr_3fr] gap-20 items-start">
+          <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-12 lg:gap-20 items-start">
             {/* Left Column - Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="space-y-10 max-w-xl ml-auto"
+              className="space-y-6 md:space-y-8 lg:space-y-10 max-w-xl md:ml-auto"
             >
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight whitespace-nowrap">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
                 Our <span className="text-brand-orange">Solutions.</span>
               </h2>
 
@@ -128,12 +128,12 @@ export default function Solutions() {
                   {[...solutions, ...solutions].map((solution, index) => (
                     <motion.div
                       key={`${solution.title}-${index}`}
-                      className="flex-shrink-0 w-[280px] md:w-[300px] lg:w-[320px]"
+                      className="flex-shrink-0 w-[280px] sm:w-[300px] md:w-[300px] lg:w-[320px]"
                     >
-                      <div className="bg-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full min-h-[400px] flex flex-col">
+                      <div className="bg-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 h-full min-h-[350px] md:min-h-[400px] flex flex-col">
                         {/* Illustration */}
-                        <div className="p-6 pb-4 flex flex-col items-center">
-                          <div className="w-32 h-32 md:w-40 md:h-40 flex items-center justify-center">
+                        <div className="p-4 md:p-6 pb-4 flex flex-col items-center">
+                          <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex items-center justify-center">
                             <img
                               src={solution.image}
                               alt={solution.title}
@@ -144,11 +144,11 @@ export default function Solutions() {
                         </div>
                         
                         {/* Content */}
-                        <div className="p-8 pt-4 flex-1 flex flex-col justify-between">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                        <div className="p-6 md:p-8 pt-4 flex-1 flex flex-col justify-between">
+                          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                             {solution.title}
                           </h3>
-                          <p className="text-gray-600 mb-4 leading-relaxed">
+                          <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
                             {solution.description}
                           </p>
                           <motion.a

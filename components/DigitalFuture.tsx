@@ -59,10 +59,10 @@ export default function DigitalFuture() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center">
             {/* Left Column - Challenges */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -95,7 +95,7 @@ export default function DigitalFuture() {
 
             {/* Center - Connecting Graphic */}
             <motion.div
-              className="hidden md:flex items-center justify-center relative h-full py-12"
+              className="hidden md:flex items-center justify-center relative h-full py-8 md:py-12"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
