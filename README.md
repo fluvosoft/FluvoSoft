@@ -200,6 +200,4 @@ vercel
 
 This project is proprietary software for FluvoSoft.
 
-## 🤝 Contributing
-
-This is a private repository for FluvoSoft. For contributions, please contact the development team.---Built with ❤️ by FluvoSoft
+## 🤝 ContributingThis is a private repository for FluvoSoft. For contributions, please contact the development team.---Built with ❤️ by FluvoSoft
