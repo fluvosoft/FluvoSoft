@@ -111,7 +111,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="relative mt-8 flex w-full items-center justify-center"
+          className="relative mt-4 md:mt-8 flex w-full items-center justify-center"
         >
           {/* Purple gradient background element */}
           <div className="absolute left-1/2 -translate-x-1/2 top-[5%] h-[200px] w-[200px] bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-blue-500/30 rounded-full blur-3xl"></div>
@@ -129,7 +129,7 @@ export default function Hero() {
                 src={wellnessImages[0]}
                 alt="Wellness Assistant AI 1"
                 fill
-                className="object-contain opacity-85"
+                className="object-contain opacity-85 grayscale"
                 sizes="(max-width: 768px) 300px, 550px"
               />
             </motion.div>
@@ -145,7 +145,7 @@ export default function Hero() {
                 src={wellnessImages[1]}
                 alt="Wellness Assistant AI 2"
                 fill
-                className="object-contain drop-shadow-2xl"
+                className="object-contain drop-shadow-2xl grayscale"
                 priority
                 sizes="(max-width: 768px) 90vw, 800px"
               />
@@ -157,12 +157,12 @@ export default function Hero() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1 }}
-                  className="absolute top-4 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-4 py-3 border border-gray-200/50 shadow-lg z-20"
+                  className="hidden md:block absolute top-4 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-4 py-3 border border-gray-200/50 shadow-lg z-20"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
                       <motion.div 
-                        className="w-2 h-2 rounded-full bg-green-500"
+                        className="w-2 h-2 rounded-full bg-gray-900"
                         animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
@@ -174,9 +174,9 @@ export default function Hero() {
                     </div>
                   </div>
                   {/* Animated Progress Bar */}
-                  <div className="h-1.5 bg-gray-200/80 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-gray-300 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-brand-orange to-green-500 rounded-full"
+                      className="h-full bg-gradient-to-r from-gray-900 to-gray-700 rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: "98%" }}
                       transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}
@@ -189,12 +189,12 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.6 }}
-                  className="absolute bottom-2 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-5 py-4 border border-gray-200/50 shadow-lg z-20"
+                  className="hidden md:block absolute bottom-2 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-5 py-4 border border-gray-200/50 shadow-lg z-20"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h4 className="text-gray-900 text-base font-semibold">Diagnostic Analysis</h4>
                     <motion.span 
-                      className="text-green-600 text-sm flex items-center gap-1.5 font-medium"
+                      className="text-gray-700 text-sm flex items-center gap-1.5 font-medium"
                       animate={{ opacity: [1, 0.5, 1] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
@@ -211,7 +211,7 @@ export default function Hero() {
                       <div className="text-gray-600 text-xs mb-2 font-medium">Confidence</div>
                       <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-brand-orange to-orange-400 rounded-full"
+                          className="h-full bg-gradient-to-r from-gray-900 to-gray-700 rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: "98%" }}
                           transition={{ duration: 1.5, delay: 1.8, ease: "easeOut" }}
@@ -230,7 +230,7 @@ export default function Hero() {
                       <div className="text-gray-600 text-xs mb-2 font-medium">Status</div>
                       <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full"
+                          className="h-full bg-gradient-to-r from-gray-800 to-gray-600 rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: "95%" }}
                           transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
@@ -249,7 +249,7 @@ export default function Hero() {
                       <div className="text-gray-600 text-xs mb-2 font-medium">Score</div>
                       <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
+                          className="h-full bg-gradient-to-r from-gray-900 to-gray-700 rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: "98%" }}
                           transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
@@ -274,8 +274,8 @@ export default function Hero() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 2.2 }}
                     >
-                      <div className="w-7 h-7 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-7 h-7 rounded-lg bg-gray-200 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
                       </div>
@@ -290,8 +290,8 @@ export default function Hero() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 2.3 }}
                     >
-                      <div className="w-7 h-7 rounded-lg bg-green-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-7 h-7 rounded-lg bg-gray-200 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                       </div>
@@ -306,8 +306,8 @@ export default function Hero() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 2.4 }}
                     >
-                      <div className="w-7 h-7 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-7 h-7 rounded-lg bg-gray-200 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
@@ -320,14 +320,14 @@ export default function Hero() {
                 </motion.div>
 
                 {/* Side Analysis Indicators with Pulse Animation */}
-                <div className="absolute top-1/2 left-2 -translate-y-1/2 flex flex-col gap-3 z-20">
+                <div className="hidden md:flex absolute top-1/2 left-2 -translate-y-1/2 flex-col gap-3 z-20">
                   <motion.div
-                    className="bg-brand-orange/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    className="bg-gray-800 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
                     animate={{ 
                       scale: [1, 1.1, 1],
                       boxShadow: [
                         "0 10px 25px rgba(0,0,0,0.3)",
-                        "0 15px 35px rgba(255, 107, 53, 0.5)",
+                        "0 15px 35px rgba(0, 0, 0, 0.5)",
                         "0 10px 25px rgba(0,0,0,0.3)"
                       ]
                     }}
@@ -338,12 +338,12 @@ export default function Hero() {
                     </svg>
                   </motion.div>
                   <motion.div
-                    className="bg-blue-500/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    className="bg-gray-700 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
                     animate={{ 
                       scale: [1, 1.1, 1],
                       boxShadow: [
                         "0 10px 25px rgba(0,0,0,0.3)",
-                        "0 15px 35px rgba(59, 130, 246, 0.5)",
+                        "0 15px 35px rgba(0, 0, 0, 0.5)",
                         "0 10px 25px rgba(0,0,0,0.3)"
                       ]
                     }}
@@ -355,9 +355,9 @@ export default function Hero() {
                   </motion.div>
                 </div>
 
-                <div className="absolute top-1/2 right-2 -translate-y-1/2 flex flex-col gap-3 z-20">
+                <div className="hidden md:flex absolute top-1/2 right-2 -translate-y-1/2 flex-col gap-3 z-20">
                   <motion.div
-                    className="bg-purple-500/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    className="bg-gray-800 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
                     animate={{ 
                       scale: [1, 1.1, 1],
                       rotate: [0, 5, -5, 0]
@@ -369,7 +369,7 @@ export default function Hero() {
                     </svg>
                   </motion.div>
                   <motion.div
-                    className="bg-green-500/90 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                    className="bg-gray-700 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
                     animate={{ 
                       scale: [1, 1.1, 1],
                       rotate: [0, -5, 5, 0]
@@ -395,7 +395,7 @@ export default function Hero() {
                 src={wellnessImages[2]}
                 alt="Wellness Assistant AI 3"
                 fill
-                className="object-contain opacity-85"
+                className="object-contain opacity-85 grayscale"
                 sizes="(max-width: 768px) 300px, 550px"
               />
             </motion.div>
