@@ -78,7 +78,7 @@ export default function Features() {
                     <img 
                       src="/Agentic Solution/donovan.png" 
                       alt="Defense & Intelligence Solutions"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover grayscale"
                     />
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function Features() {
                     <img 
                       src="/Agentic Solution/gen-ai.png" 
                       alt="Enterprise Solutions"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover grayscale"
                     />
                   </div>
                 </div>
