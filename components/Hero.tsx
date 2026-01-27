@@ -36,20 +36,30 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-white">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
       <div ref={containerRef} className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 w-full">
         <div className="max-w-6xl mx-auto text-center">
+          {/* Small uppercase label */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-6"
+          >
+            <h2 className="text-md md:text-md uppercase lg:text-md font-bold text-white text-center font-inter mb-6">
+              FluvoSoft Works With
+            </h2>
+          </motion.div>
+
           {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8 font-inter"
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="text-3xl md:text-4xl lg:text-5xl font-normal text-white text-center mb-4"
           >
-            <span className="text-brand-orange">Transform Your Business</span>
-            <br />
             <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
-              with AI-Powered Solutions
+              Blockchain and Automation
             </span>
           </motion.h1>
 
@@ -58,9 +68,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-base sm:text-lg md:text-xl text-black mb-4 max-w-4xl mx-auto leading-relaxed font-inter"
+            className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8"
           >
-            Test, Develop and Deploy all your AI models in one place, with FluvoSoft seamless playground interface
+            Transform your business with cutting-edge blockchain solutions and intelligent automation. Build secure, decentralized applications and streamline operations with FluvoSoft&apos;s innovative technology platform.
           </motion.div>
           
           {/* CTA Buttons */}
@@ -73,7 +83,7 @@ export default function Hero() {
             {/* Watch Video Button */}
             <button
               onClick={openVideo}
-              className="group relative w-[170px] max-lg:w-[160px] rounded-xl py-4 max-lg:py-2 flex items-center justify-center gap-2 bg-transparent text-gray-900 transition-colors duration-300 border-2 border-gray-900 hover:border-brand-orange hover:text-brand-orange"
+              className="group relative w-[170px] max-lg:w-[160px] rounded-xl py-4 max-lg:py-2 flex items-center justify-center gap-2 bg-transparent text-white transition-colors duration-300 border-2 border-white hover:border-brand-orange hover:text-brand-orange"
             >
               <div className="relative flex items-center justify-center w-6 h-6">
                 <div className="absolute inset-0 top-0 left-0 scale-0 duration-300 group-hover:scale-100 border-2 border-brand-orange rounded-full w-full h-full"></div>
@@ -157,26 +167,26 @@ export default function Hero() {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1 }}
-                  className="hidden md:block absolute top-4 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-4 py-3 border border-gray-200/50 shadow-lg z-20"
+                  className="hidden md:block absolute top-4 left-4 right-4 bg-black/80 backdrop-blur-md rounded-lg px-4 py-3 border border-white/20 shadow-lg z-20"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-3">
                       <motion.div 
-                        className="w-2 h-2 rounded-full bg-gray-900"
+                        className="w-2 h-2 rounded-full bg-white"
                         animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                       />
-                      <span className="text-gray-900 text-sm font-medium">Real-time Analysis</span>
+                      <span className="text-white text-sm font-medium">Real-time Analysis</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-gray-600 text-sm">98% Accuracy</span>
-                      <div className="w-1 h-1 rounded-full bg-gray-400 animate-pulse"></div>
+                      <span className="text-white/70 text-sm">98% Accuracy</span>
+                      <div className="w-1 h-1 rounded-full bg-white/60 animate-pulse"></div>
                     </div>
                   </div>
                   {/* Animated Progress Bar */}
-                  <div className="h-1.5 bg-gray-300 rounded-full overflow-hidden">
+                  <div className="h-1.5 bg-white/20 rounded-full overflow-hidden">
                     <motion.div
-                      className="h-full bg-gradient-to-r from-gray-900 to-gray-700 rounded-full"
+                      className="h-full bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: "98%" }}
                       transition={{ duration: 2, delay: 1.2, ease: "easeOut" }}
@@ -189,12 +199,12 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 1.6 }}
-                  className="hidden md:block absolute bottom-2 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-5 py-4 border border-gray-200/50 shadow-lg z-20"
+                  className="hidden md:block absolute bottom-2 left-4 right-4 bg-black/80 backdrop-blur-md rounded-lg px-5 py-4 border border-white/20 shadow-lg z-20"
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-gray-900 text-base font-semibold">Diagnostic Analysis</h4>
+                    <h4 className="text-white text-base font-semibold">Diagnostic Analysis</h4>
                     <motion.span 
-                      className="text-gray-700 text-sm flex items-center gap-1.5 font-medium"
+                      className="text-white/80 text-sm flex items-center gap-1.5 font-medium"
                       animate={{ opacity: [1, 0.5, 1] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
@@ -207,18 +217,18 @@ export default function Hero() {
                   
                   {/* Animated Bar Chart */}
                   <div className="grid grid-cols-3 gap-3 mb-4">
-                    <div className="bg-gray-100/80 rounded-lg px-3 py-3 border border-gray-200/50">
-                      <div className="text-gray-600 text-xs mb-2 font-medium">Confidence</div>
-                      <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
+                    <div className="bg-white/10 rounded-lg px-3 py-3 border border-white/20">
+                      <div className="text-white/70 text-xs mb-2 font-medium">Confidence</div>
+                      <div className="h-3 bg-white/20 rounded-full overflow-hidden mb-2">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-gray-900 to-gray-700 rounded-full"
+                          className="h-full bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: "98%" }}
                           transition={{ duration: 1.5, delay: 1.8, ease: "easeOut" }}
                         />
                       </div>
                       <motion.div 
-                        className="text-gray-900 text-sm font-bold"
+                        className="text-white text-sm font-bold"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 2 }}
@@ -226,18 +236,18 @@ export default function Hero() {
                         98%
                       </motion.div>
                     </div>
-                    <div className="bg-gray-100/80 rounded-lg px-3 py-3 border border-gray-200/50">
-                      <div className="text-gray-600 text-xs mb-2 font-medium">Status</div>
-                      <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
+                    <div className="bg-white/10 rounded-lg px-3 py-3 border border-white/20">
+                      <div className="text-white/70 text-xs mb-2 font-medium">Status</div>
+                      <div className="h-3 bg-white/20 rounded-full overflow-hidden mb-2">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-gray-800 to-gray-600 rounded-full"
+                          className="h-full bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: "95%" }}
                           transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
                         />
                       </div>
                       <motion.div 
-                        className="text-gray-900 text-sm font-bold"
+                        className="text-white text-sm font-bold"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 2.2 }}
@@ -245,18 +255,18 @@ export default function Hero() {
                         95%
                       </motion.div>
                     </div>
-                    <div className="bg-gray-100/80 rounded-lg px-3 py-3 border border-gray-200/50">
-                      <div className="text-gray-600 text-xs mb-2 font-medium">Score</div>
-                      <div className="h-3 bg-gray-200/80 rounded-full overflow-hidden mb-2">
+                    <div className="bg-white/10 rounded-lg px-3 py-3 border border-white/20">
+                      <div className="text-white/70 text-xs mb-2 font-medium">Score</div>
+                      <div className="h-3 bg-white/20 rounded-full overflow-hidden mb-2">
                         <motion.div
-                          className="h-full bg-gradient-to-r from-gray-900 to-gray-700 rounded-full"
+                          className="h-full bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: "98%" }}
                           transition={{ duration: 1.5, delay: 2.2, ease: "easeOut" }}
                         />
                       </div>
                       <motion.div 
-                        className="text-gray-900 text-sm font-bold"
+                        className="text-white text-sm font-bold"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 2.4 }}
@@ -269,51 +279,51 @@ export default function Hero() {
                   {/* Animated Metrics - Professional */}
                   <div className="flex gap-3">
                     <motion.div
-                      className="flex-1 bg-gray-100/60 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-200/50"
+                      className="flex-1 bg-white/10 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-white/20"
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 2.2 }}
                     >
-                      <div className="w-7 h-7 rounded-lg bg-gray-200 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-7 h-7 rounded-lg bg-white/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
                       </div>
                       <div>
-                        <div className="text-gray-600 text-[10px] font-medium uppercase tracking-wide">Data Points</div>
-                        <div className="text-gray-900 text-sm font-bold">1,247</div>
+                        <div className="text-white/70 text-[10px] font-medium uppercase tracking-wide">Data Points</div>
+                        <div className="text-white text-sm font-bold">1,247</div>
                       </div>
                     </motion.div>
                     <motion.div
-                      className="flex-1 bg-gray-100/60 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-200/50"
+                      className="flex-1 bg-white/10 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-white/20"
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 2.3 }}
                     >
-                      <div className="w-7 h-7 rounded-lg bg-gray-200 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-7 h-7 rounded-lg bg-white/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                       </div>
                       <div>
-                        <div className="text-gray-600 text-[10px] font-medium uppercase tracking-wide">Speed</div>
-                        <div className="text-gray-900 text-sm font-bold">0.32s</div>
+                        <div className="text-white/70 text-[10px] font-medium uppercase tracking-wide">Speed</div>
+                        <div className="text-white text-sm font-bold">0.32s</div>
                       </div>
                     </motion.div>
                     <motion.div
-                      className="flex-1 bg-gray-100/60 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-gray-200/50"
+                      className="flex-1 bg-white/10 rounded-lg px-3 py-2.5 flex items-center gap-2.5 border border-white/20"
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 2.4 }}
                     >
-                      <div className="w-7 h-7 rounded-lg bg-gray-200 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="w-7 h-7 rounded-lg bg-white/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
                       <div>
-                        <div className="text-gray-600 text-[10px] font-medium uppercase tracking-wide">Precision</div>
-                        <div className="text-gray-900 text-sm font-bold">99.2%</div>
+                        <div className="text-white/70 text-[10px] font-medium uppercase tracking-wide">Precision</div>
+                        <div className="text-white text-sm font-bold">99.2%</div>
                       </div>
                     </motion.div>
                   </div>

@@ -59,7 +59,7 @@ export default function DigitalFuture() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-white">
+    <section className="py-12 md:py-16 lg:py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center">
@@ -71,7 +71,7 @@ export default function DigitalFuture() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">
                 Challenges in regulated markets
               </h2>
               <ul className="space-y-6">
@@ -84,10 +84,10 @@ export default function DigitalFuture() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-gray-700">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white">
                       {challenge.icon}
                     </div>
-                    <span className="text-lg text-gray-600 pt-2">{challenge.text}</span>
+                    <span className="text-lg text-white/70 pt-2">{challenge.text}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -106,9 +106,10 @@ export default function DigitalFuture() {
                 <motion.path
                   d="M 50 30 L 80 150 L 50 270"
                   fill="none"
-                  stroke="#d1d5db"
+                  stroke="#ffffff"
                   strokeWidth="2"
                   strokeDasharray="4,4"
+                  strokeOpacity="0.3"
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
                   viewport={{ once: true }}
@@ -117,9 +118,10 @@ export default function DigitalFuture() {
                 <motion.path
                   d="M 50 30 L 20 150 L 50 270"
                   fill="none"
-                  stroke="#d1d5db"
+                  stroke="#ffffff"
                   strokeWidth="2"
                   strokeDasharray="4,4"
+                  strokeOpacity="0.3"
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
                   viewport={{ once: true }}
@@ -179,7 +181,7 @@ export default function DigitalFuture() {
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
               className="space-y-6"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-8">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-8">
                 A FluvoSoft-enabled digital future
               </h2>
               <ul className="space-y-6">
@@ -195,7 +197,7 @@ export default function DigitalFuture() {
                     <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand-orange/10 flex items-center justify-center text-brand-orange">
                       {solution.icon}
                     </div>
-                    <span className="text-lg text-gray-600 pt-2">{solution.text}</span>
+                    <span className="text-lg text-white/70 pt-2">{solution.text}</span>
                   </motion.li>
                 ))}
               </ul>

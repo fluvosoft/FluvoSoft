@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-black">
       <Header />
       
       {/* Hero Section */}
@@ -38,12 +38,12 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Story</h2>
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-white/70 text-lg leading-relaxed mb-6">
                   We started as a small team who love technology. Today, we work with over 50 companies around the world. We build AI tools, blockchain apps, and custom software. Our focus on doing great work and helping clients succeed makes us a trusted choice for businesses looking for technology solutions.
                 </p>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className="text-white/70 text-lg leading-relaxed">
                   From startups to enterprise companies, we&apos;ve helped businesses transform their operations with innovative technology solutions. Our commitment to excellence and client success drives everything we do.
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
@@ -63,15 +63,15 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-gray-50 rounded-2xl p-8 md:p-10"
+                className="bg-white/5 rounded-2xl p-8 md:p-10 border border-white/20"
               >
                 <div className="w-16 h-16 bg-brand-orange/10 rounded-xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Our Mission</h3>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h3>
+                <p className="text-white/70 text-lg leading-relaxed">
                   To build smart, safe, and reliable software that helps businesses everywhere. We make new technology easy to use and affordable for companies big and small.
                 </p>
               </motion.div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="bg-gray-50 rounded-2xl p-8 md:p-10"
+                className="bg-white/5 rounded-2xl p-8 md:p-10 border border-white/20"
               >
                 <div className="w-16 h-16 bg-brand-orange/10 rounded-xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,8 +90,8 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Our Vision</h3>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Our Vision</h3>
+                <p className="text-white/70 text-lg leading-relaxed">
                   To be a world leader in helping businesses use technology better. We want to set the standard for great ideas and reliable work. We see a future where every business can use technology to grow and succeed.
                 </p>
               </motion.div>
@@ -111,8 +111,8 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Values</h2>
-              <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Values</h2>
+              <p className="text-white/70 text-lg max-w-2xl mx-auto">
                 The principles that guide everything we do
               </p>
             </motion.div>
@@ -162,13 +162,13 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow"
+                  className="bg-white/5 rounded-xl p-6 border border-white/20 hover:shadow-lg transition-shadow"
                 >
                   <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center text-brand-orange mb-4">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-3">{value.title}</h3>
-                  <p className="text-gray-700 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                  <p className="text-white/70 leading-relaxed">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
       </section>
 
       {/* Impact Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -187,8 +187,8 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Impact</h2>
-              <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Impact</h2>
+              <p className="text-white/70 text-lg max-w-2xl mx-auto">
                 Numbers that reflect our commitment to excellence
               </p>
             </motion.div>
@@ -211,8 +211,8 @@ export default function AboutPage() {
                   <div className="text-5xl md:text-6xl font-bold text-brand-orange mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-xl font-semibold text-black mb-2">{stat.label}</div>
-                  <div className="text-gray-600">{stat.description}</div>
+                  <div className="text-xl font-semibold text-white mb-2">{stat.label}</div>
+                  <div className="text-white/60">{stat.description}</div>
                 </motion.div>
               ))}
             </div>
@@ -221,7 +221,7 @@ export default function AboutPage() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -230,8 +230,8 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 text-center">Our Technology Expertise</h2>
-              <p className="text-gray-700 text-lg leading-relaxed mb-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Our Technology Expertise</h2>
+              <p className="text-white/70 text-lg leading-relaxed mb-8 text-center">
                 We work with cutting-edge technologies to deliver the best solutions for our clients
               </p>
               
@@ -253,11 +253,11 @@ export default function AboutPage() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
-                    className="bg-white rounded-lg px-6 py-4 border border-gray-200 hover:border-brand-orange hover:shadow-md transition-all"
+                    className="bg-white/5 rounded-lg px-6 py-4 border border-white/20 hover:border-brand-orange hover:shadow-md transition-all"
                   >
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 bg-brand-orange rounded-full"></div>
-                      <span className="text-gray-800 font-medium">{tech}</span>
+                      <span className="text-white font-medium">{tech}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -285,7 +285,7 @@ export default function AboutPage() {
             </p>
             <a
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-gray-50 transition-colors shadow-lg"
+              className="inline-block px-8 py-4 bg-white text-brand-orange font-semibold rounded-lg hover:bg-white/90 transition-colors shadow-lg"
             >
               Get in Touch
             </a>

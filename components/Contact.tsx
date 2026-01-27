@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section id="contact" className="py-12 md:py-16 lg:py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
@@ -50,14 +50,14 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="bg-white rounded-lg border border-gray-200 shadow-md p-6 md:p-8"
+              className="bg-black rounded-lg border border-white/20 shadow-md p-6 md:p-8"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-6 md:mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-6 md:mb-8">
                 Send us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                     Name *
                   </label>
                   <input
@@ -67,11 +67,11 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                     Email *
                   </label>
                   <input
@@ -81,11 +81,11 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors"
                   />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-black mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
                     Subject
                   </label>
                   <input
@@ -94,11 +94,11 @@ export default function Contact() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
                     Message *
                   </label>
                   <textarea
@@ -108,7 +108,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors resize-y"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-brand-orange focus:border-brand-orange outline-none transition-colors resize-y"
                   />
                 </div>
                 <motion.button
@@ -134,7 +134,7 @@ export default function Contact() {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800"
+                      className="mt-4 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400"
                     >
                       Thank you! Your message has been sent successfully.
                     </motion.div>
@@ -144,7 +144,7 @@ export default function Contact() {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800"
+                      className="mt-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400"
                     >
                       There was an error sending your message. Please try again.
                     </motion.div>
@@ -159,9 +159,9 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="bg-white rounded-lg border border-gray-200 shadow-md p-6 md:p-8"
+              className="bg-black rounded-lg border border-white/20 shadow-md p-6 md:p-8"
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-6 md:mb-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-6 md:mb-10">
                 Contact Info
               </h2>
               
@@ -169,7 +169,7 @@ export default function Contact() {
                 {/* Email */}
                 <motion.a
                   href="mailto:fluvosoftinfo@gmail.com"
-                  className="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl hover:bg-gray-50 transition-colors group cursor-pointer"
+                  className="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl hover:bg-white/10 transition-colors group cursor-pointer"
                   whileHover={{ x: 4 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -179,15 +179,15 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-gray-700 mb-1 text-xs md:text-sm uppercase tracking-wide">Email</div>
-                    <div className="text-sm md:text-base text-black font-medium group-hover:text-brand-orange transition-colors break-words">fluvosoftinfo@gmail.com</div>
+                    <div className="font-semibold text-white/70 mb-1 text-xs md:text-sm uppercase tracking-wide">Email</div>
+                    <div className="text-sm md:text-base text-white font-medium group-hover:text-brand-orange transition-colors break-words">fluvosoftinfo@gmail.com</div>
                   </div>
                 </motion.a>
 
                 {/* Phone */}
                 <motion.a
                   href="tel:+8801762746646"
-                  className="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl hover:bg-gray-50 transition-colors group cursor-pointer"
+                  className="flex items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl hover:bg-white/10 transition-colors group cursor-pointer"
                   whileHover={{ x: 4 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -197,8 +197,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-gray-700 mb-1 text-xs md:text-sm uppercase tracking-wide">Phone</div>
-                    <div className="text-sm md:text-base text-black font-medium group-hover:text-brand-orange transition-colors">01762746646</div>
+                    <div className="font-semibold text-white/70 mb-1 text-xs md:text-sm uppercase tracking-wide">Phone</div>
+                    <div className="text-sm md:text-base text-white font-medium group-hover:text-brand-orange transition-colors">01762746646</div>
                   </div>
                 </motion.a>
 
@@ -215,8 +215,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-gray-700 mb-1 text-xs md:text-sm uppercase tracking-wide">Address</div>
-                    <div className="text-sm md:text-base text-black font-medium leading-relaxed">
+                    <div className="font-semibold text-white/70 mb-1 text-xs md:text-sm uppercase tracking-wide">Address</div>
+                    <div className="text-sm md:text-base text-white font-medium leading-relaxed">
                       FluvoSoft Ltd.<br />
                       Dhaka, Bangladesh
                     </div>
@@ -225,18 +225,18 @@ export default function Contact() {
               </div>
 
               {/* Social Media */}
-              <div className="pt-6 md:pt-8 border-t border-gray-200">
-                <div className="font-semibold text-black mb-4 md:mb-6 text-base md:text-lg">Connect with us</div>
+              <div className="pt-6 md:pt-8 border-t border-white/20">
+                <div className="font-semibold text-white mb-4 md:mb-6 text-base md:text-lg">Connect with us</div>
                 <div className="flex gap-3">
                   <motion.a 
                     href="https://www.linkedin.com/company/fluvo-soft" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-xl hover:bg-brand-orange hover:text-white transition-all group"
+                    className="w-12 h-12 flex items-center justify-center bg-white/10 rounded-xl hover:bg-brand-orange hover:text-white transition-all group"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-white group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                   </motion.a>
@@ -244,11 +244,11 @@ export default function Contact() {
                     href="https://github.com/fluvosoft" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-xl hover:bg-brand-orange hover:text-white transition-all group"
+                    className="w-12 h-12 flex items-center justify-center bg-white/10 rounded-xl hover:bg-brand-orange hover:text-white transition-all group"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <svg className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-white group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                       <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"/>
                     </svg>
                   </motion.a>

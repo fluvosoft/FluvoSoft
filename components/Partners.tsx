@@ -18,15 +18,15 @@ export default function Partners() {
   const duplicatedPartners = [...partners, ...partners];
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
+    <section className="py-12 md:py-16 bg-black overflow-hidden">
       <div className="container mx-auto px-4">
-        <h2 className="text-base sm:text-lg md:text-xl font-semibold text-center text-gray-900 mb-8 md:mb-12 px-2">
+        <h2 className="text-base sm:text-lg md:text-xl font-semibold text-center text-white mb-8 md:mb-12 px-2">
           <span className="inline-block bg-gradient-to-r from-brand-orange via-brand-orange-light via-brand-orange to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Fluvosoft works with</span> Generative AI Companies, BD Government Agencies & Enterprises
         </h2>
         <div className="relative">
           {/* Gradient masks for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-48 md:w-64 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
           
           <div className="overflow-hidden">
             <motion.div
@@ -52,7 +52,7 @@ export default function Partners() {
                 >
                   {partner.isTextOnly ? (
                     <div 
-                      className={`text-gray-400 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold whitespace-nowrap hover:text-brand-orange transition-colors duration-300 ${
+                      className={`text-white/60 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold whitespace-nowrap hover:text-brand-orange transition-colors duration-300 ${
                         partner.useTimesNewRoman ? 'font-serif' : ''
                       }`}
                       style={partner.useTimesNewRoman ? { fontFamily: "'Times New Roman', Times, serif" } : {}}

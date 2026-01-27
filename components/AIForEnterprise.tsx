@@ -36,20 +36,20 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
   const currentImage: ImageType = hoveredImage || 'default';
 
   return (
-    <section className={`py-18 lg:py-20 bg-white relative ${className}`}>
+    <section className={`py-18 lg:py-20 bg-black relative ${className}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection>
-            <h2 className="text-md md:text-md uppercase lg:text-md font-bold text-gray-900 text-center font-inter mb-6">
+            <h2 className="text-md md:text-md uppercase lg:text-md font-bold text-white text-center font-inter mb-6">
               AI for the Enterprise
             </h2>
           </AnimatedSection>
           
           <AnimatedSection delay={0.2}>
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 text-center mb-4">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white text-center mb-4">
               Full-Stack AI Solutions
             </h3>
-            <p className="text-lg md:text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
               Outcomes delivered with world-class data, models, agents, and deployment.
             </p>
           </AnimatedSection>
@@ -69,11 +69,11 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
                   className="space-y-3 text-left w-full cursor-pointer"
                 >
                   <h4 className={`text-2xl font-bold transition-colors ${
-                    hoveredImage === 'rlhf' ? 'text-brand-orange' : 'text-gray-900'
+                    hoveredImage === 'rlhf' ? 'text-brand-orange' : 'text-white'
                   }`}>
                     Fine-Tuning and RLHF
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white/70 leading-relaxed">
                     Adapt best-in-class foundation models to your business and your specific data to build sustainable, successful AI programs and data from your enterprise.
                   </p>
                 </motion.div>
@@ -88,11 +88,11 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
                   className="space-y-3 text-left w-full cursor-pointer"
                 >
                   <h4 className={`text-2xl font-bold transition-colors ${
-                    hoveredImage === 'foundation-models' ? 'text-brand-orange' : 'text-gray-900'
+                    hoveredImage === 'foundation-models' ? 'text-brand-orange' : 'text-white'
                   }`}>
                     Foundation Models
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white/70 leading-relaxed">
                     Scale partners or integrates with all of the leading AI models, from open-source to closed-source, including Google, Meta, Cohere, and more.
                   </p>
                 </motion.div>
@@ -107,11 +107,11 @@ export default function AIForEnterprise({ className = '' }: AIForEnterpriseProps
                   className="space-y-3 text-left w-full cursor-pointer"
                 >
                   <h4 className={`text-2xl font-bold transition-colors ${
-                    hoveredImage === 'data-engine' ? 'text-brand-orange' : 'text-gray-900'
+                    hoveredImage === 'data-engine' ? 'text-brand-orange' : 'text-white'
                   }`}>
                     Enterprise Data
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white/70 leading-relaxed">
                     Scale&apos;s Data Engine enables you to integrate your enterprise data into the fold of these models, providing the base for long-term strategic differentiation.
                   </p>
                 </motion.div>

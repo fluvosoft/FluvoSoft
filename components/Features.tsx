@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import AnimatedSection from './AnimatedSection';
 
 const stats = [
@@ -35,24 +36,24 @@ const stats = [
 
 export default function Features() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <AnimatedSection>
-              <h2 className="text-md md:text-md uppercase lg:text-md font-bold text-gray-900 font-inter mb-6">
+              <h2 className="text-md md:text-md uppercase lg:text-md font-bold text-white font-inter mb-6">
                 Apply AI
               </h2>
             </AnimatedSection>
             
             <AnimatedSection delay={0.2}>
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 mb-4">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
                 <span className=" bg-gradient-to-r from-brand-orange via-brand-orange-light to-brand-orange-dark bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">Agentic</span> Solutions
               </h3>
             </AnimatedSection>
             
             <AnimatedSection delay={0.4}>
-              <p className="text-lg md:text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Transform your data and expertise into agentic solutions that continuously improve with human interaction.
               </p>
             </AnimatedSection>
@@ -65,20 +66,21 @@ export default function Features() {
               <div>
                 {/* Text Content */}
                 <div className="mb-4 md:mb-6">
-                  <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 md:mb-3">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2 md:mb-3">
                     Defense & Intelligence
                   </h4>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-white/70 leading-relaxed">
                     Orchestrate agent workflows for decision advantage. Transform complex data into actionable intelligence with advanced AI agents.
                   </p>
                 </div>
                 {/* Image with gap from top and left only */}
                 <div className="mt-6 md:mt-8 pl-0 sm:pl-4 md:pl-8">
-                  <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                    <img 
+                  <div className="relative w-full aspect-video bg-white/10 rounded-lg overflow-hidden">
+                    <Image 
                       src="/Agentic Solution/donovan.png" 
                       alt="Defense & Intelligence Solutions"
-                      className="w-full h-full object-cover grayscale"
+                      fill
+                      className="object-cover grayscale"
                     />
                   </div>
                 </div>
@@ -90,20 +92,21 @@ export default function Features() {
               <div>
                 {/* Text Content */}
                 <div className="mb-4 md:mb-6">
-                  <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-2 md:mb-3">
+                  <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2 md:mb-3">
                     Enterprise Solutions
                   </h4>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-white/70 leading-relaxed">
                     Deploy intelligent agents that automate workflows and enhance productivity across your organization with continuous learning.
                   </p>
                 </div>
                 {/* Image with gap from top and left only */}
                 <div className="mt-6 md:mt-8 pl-0 sm:pl-4 md:pl-8">
-                  <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
-                    <img 
+                  <div className="relative w-full aspect-video bg-white/10 rounded-lg overflow-hidden">
+                    <Image 
                       src="/Agentic Solution/gen-ai.png" 
                       alt="Enterprise Solutions"
-                      className="w-full h-full object-cover grayscale"
+                      fill
+                      className="object-cover grayscale"
                     />
                   </div>
                 </div>

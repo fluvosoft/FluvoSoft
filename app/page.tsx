@@ -7,7 +7,6 @@ import AIWorkflowDemo from '@/components/AIWorkflowDemo';
 import Features from '@/components/Features';
 import ProgressMarkets from '@/components/ProgressMarkets';
 import Solutions from '@/components/Solutions';
-import Stats from '@/components/Stats';
 import DigitalFuture from '@/components/DigitalFuture';
 import EvolutionSection from '@/components/EvolutionSection';
 import Contact from '@/components/Contact';
@@ -25,7 +24,6 @@ export default function Home() {
       <Features />
       <ProgressMarkets />
       <Solutions />
-      <Stats />
       <EvolutionSection />
       <DigitalFuture />
       <Contact />

@@ -25,7 +25,7 @@ export default function ProgressMarkets() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section className="py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-center">
@@ -59,17 +59,17 @@ export default function ProgressMarkets() {
                 </motion.button>
 
                 {/* Title */}
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-gray-900 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-black leading-tight">
                   Our focus is progressing markets
                 </h2>
 
                 {/* Paragraph */}
-                <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
                   Effectively deploying enterprise solutions requires a deep knowledge of business operations, technology implementation, practical workflows, and industry best practices.
                 </p>
 
                 {/* Subtitle */}
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 pt-2 sm:pt-4">
+                <h3 className="text-xl sm:text-2xl font-bold text-black pt-2 sm:pt-4">
                   Enterprise Blockchain Solutions
                 </h3>
 
@@ -84,7 +84,7 @@ export default function ProgressMarkets() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="space-y-2"
                     >
-                      <h4 className="text-base sm:text-lg font-bold text-gray-900">
+                      <h4 className="text-base sm:text-lg font-bold text-black">
                         {item.title}
                       </h4>
                       <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -118,7 +118,7 @@ export default function ProgressMarkets() {
                   </motion.a>
                   <motion.a
                     href="#contact"
-                    className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-white hover:bg-gray-50 text-brand-orange border-2 border-brand-orange rounded-lg font-medium text-xs sm:text-sm transition-colors duration-200"
+                    className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 bg-white hover:bg-gray-50 text-black border-2 border-black rounded-lg font-medium text-xs sm:text-sm transition-colors duration-200"
                     whileHover={{ 
                       scale: 1.05, 
                       y: -3,

@@ -5,13 +5,13 @@ import Link from 'next/link';
 
 export default function EvolutionSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-black">
       {/* Top Section - Quote */}
-      <div className="py-18 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      <div className="py-18 lg:py-20 bg-black">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              className="relative p-8 md:p-12 lg:p-16 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+              className="relative p-8 md:p-12 lg:p-16 bg-black rounded-2xl shadow-xl border border-white/20 overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -43,7 +43,7 @@ export default function EvolutionSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-gray-900 leading-relaxed">
+                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-white leading-relaxed">
                     <span className="text-brand-orange font-semibold">FluvoSoft</span> is supporting the evolution of digital financial markets through{' '}
                     <span className="inline-block bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent font-semibold">
                       openness
@@ -70,8 +70,8 @@ export default function EvolutionSection() {
                 >
                   <div className="h-px w-12 bg-brand-orange" />
                   <div className="h-2 w-2 rounded-full bg-brand-orange" />
-                  <div className="h-px w-8 bg-gray-300" />
-                  <span className="text-sm text-gray-500 font-medium">Our Commitment</span>
+                  <div className="h-px w-8 bg-white/30" />
+                  <span className="text-sm text-white/70 font-medium">Our Commitment</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -94,13 +94,13 @@ export default function EvolutionSection() {
               >
                 {/* Tag */}
                 <motion.div
-                  className="inline-block bg-white rounded-lg px-4 py-2 mb-6"
+                  className="inline-block bg-white/10 rounded-lg px-4 py-2 mb-6"
                   initial={{ opacity: 0, y: -20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <span className="text-sm font-semibold text-gray-900">FluvoSoft Lab</span>
+                  <span className="text-sm font-semibold text-white">FluvoSoft Lab</span>
                 </motion.div>
 
                 {/* Heading */}

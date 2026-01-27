@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import AnimatedSection from './AnimatedSection';
 
 interface AIWorkflowDemoProps {
@@ -63,18 +64,20 @@ const ChatBubble = ({
     className={`flex items-start gap-3 ${isUser ? 'flex-row' : isAI ? 'flex-row-reverse' : 'flex-col'} ${isAI ? 'justify-end' : ''}`}
   >
     {(isUser || isAI) && showProfilePic && (
-      <div className="w-8 h-8 rounded-full flex-shrink-0 overflow-hidden bg-gray-700/50 backdrop-blur-sm border border-gray-600/50 flex items-center justify-center">
+      <div className="w-8 h-8 rounded-full flex-shrink-0 overflow-hidden bg-gray-700/50 backdrop-blur-sm border border-gray-600/50 flex items-center justify-center relative">
         {isAI ? (
-          <img 
+          <Image 
             src="/illustrations/ai_logo_fluvosoft.jpg" 
             alt="AI" 
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         ) : (
-          <img 
+          <Image 
             src="/illustrations/human_logo_fluvosoft.jpg" 
             alt="User" 
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         )}
       </div>
@@ -202,11 +205,12 @@ const ChatAnimation = () => {
                 exit={{ opacity: 0, x: 20 }}
                 className="flex items-start gap-3 justify-end"
               >
-                <div className="w-8 h-8 rounded-full flex-shrink-0 overflow-hidden bg-gray-700/50 backdrop-blur-sm border border-gray-600/50 flex items-center justify-center">
-                  <img 
+                <div className="w-8 h-8 rounded-full flex-shrink-0 overflow-hidden bg-gray-700/50 backdrop-blur-sm border border-gray-600/50 flex items-center justify-center relative">
+                  <Image 
                     src="/illustrations/ai_logo_fluvosoft.jpg" 
                     alt="AI" 
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="bg-gray-800/30 backdrop-blur-md border border-gray-600/30 rounded-2xl px-4 py-3">

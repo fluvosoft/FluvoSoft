@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-12 md:py-16">
+    <footer className="bg-black py-12 md:py-16">
       <div className="mx-auto px-4 sm:px-6 md:px-8">
         {/* Main Content Container - White Rounded Rectangle */}
         <div className="bg-black rounded-2xl px-4 sm:px-6 py-12 md:py-16 lg:py-20 shadow-sm">

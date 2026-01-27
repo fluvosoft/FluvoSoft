@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Announcement() {
   return (
-    <section className="bg-brand-orange py-3 border-b border-brand-orange-dark">
+    <section className="bg-black py-3 border-b border-white/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-3">
           <div className="flex items-center gap-2">
