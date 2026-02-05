@@ -48,8 +48,8 @@ export default function Header() {
                 </svg>
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-black border border-white/20 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <Link href="/esoul" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors rounded-xl text-sm">
-                  eSoul
+                <Link href="/lumiro" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors rounded-xl text-sm">
+                  Lumiro
                 </Link>
               </div>
             </div>
@@ -273,11 +273,11 @@ export default function Header() {
                 <div className="pt-2 pb-1">
                   <span className="block py-2 text-white/80 font-inter text-sm font-semibold uppercase tracking-wide">Brands</span>
                   <Link 
-                    href="/esoul" 
+                    href="/lumiro" 
                     className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    eSoul
+                    Lumiro
                   </Link>
                 </div>
                 <div className="pt-2 pb-1">
@@ -361,7 +361,7 @@ export default function Header() {
                 </div>
                 <Link 
                   href="/contact" 
-                  className="block py-3 px-6 bg-white text-brand-orange rounded-lg mt-3 hover:bg-gray-50 hover:shadow-lg font-semibold font-inter transition-all duration-300 inline-flex items-center gap-2 text-lg group"
+                  className="inline-flex py-3 px-6 bg-white text-brand-orange rounded-lg mt-3 hover:bg-gray-50 hover:shadow-lg font-semibold font-inter transition-all duration-300 items-center gap-2 text-lg group"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Book a Demo
