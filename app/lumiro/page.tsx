@@ -4,15 +4,56 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Script from 'next/script';
 
 export default function LumiroPage() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Lumiro',
+    applicationCategory: 'WebApplication',
+    operatingSystem: 'Web',
+    description: 'Professional landing page template with modern design components and seamless customization for your business.',
+    provider: {
+      '@type': 'Organization',
+      name: 'FluvoSoft',
+      url: 'https://fluvosoft.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '150',
+    },
+  };
   return (
     <main className="min-h-screen bg-black">
+      <Script
+        id="lumiro-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-orange to-brand-orange-dark py-20 md:py-28">
-        <div className="container mx-auto px-4">
+      <section className="relative py-20 md:py-28 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Page info/Hero_right_side.png"
+            alt="Lumiro professional landing page template hero background with modern design elements"
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,17 +124,15 @@ export default function LumiroPage() {
                 transition={{ duration: 0.8 }}
                 className="relative h-[400px] rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 bg-brand-orange/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <svg className="w-12 h-12 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                    </div>
-                    <h4 className="text-xl font-bold text-white mb-2">SaaS Landing Page</h4>
-                    <p className="text-white/70">Professional template for your business</p>
-                  </div>
-                </div>
+                <Image
+                  src="/Page info/carosel_5.jpeg"
+                  alt="Lumiro business landing page template showcase with modern UI components and seamless customization"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  quality={85}
+                />
               </motion.div>
             </div>
           </div>

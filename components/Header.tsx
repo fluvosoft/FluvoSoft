@@ -61,17 +61,17 @@ export default function Header() {
                 </svg>
               </button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-black border border-white/20 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <Link href="/fluvo-soft-lab" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors rounded-t-xl text-sm">
-                  FluvoSoft Lab
+                <Link href="/blockchain" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors rounded-t-xl text-sm">
+                  Blockchain
                 </Link>
-                <Link href="/solana-toolkit" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors text-sm">
-                  FluvoSoft Solana Toolkit
+                <Link href="/automation" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors text-sm">
+                  Automation
                 </Link>
-                <Link href="/corda" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors text-sm">
-                  Corda
+                <Link href="/custom-development" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors text-sm">
+                  Custom Development
                 </Link>
-                <Link href="/service-support" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors rounded-b-xl text-sm">
-                  Service and Support
+                <Link href="/saas" className="block px-4 py-2 text-white hover:bg-white/10 hover:text-brand-orange font-inter transition-colors rounded-b-xl text-sm">
+                  SaaS
                 </Link>
               </div>
             </div>
@@ -283,32 +283,32 @@ export default function Header() {
                 <div className="pt-2 pb-1">
                   <span className="block py-2 text-white/80 font-inter text-sm font-semibold uppercase tracking-wide">Solutions</span>
                   <Link 
-                    href="/fluvo-soft-lab" 
+                    href="/blockchain" 
                     className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    FluvoSoft Lab
+                    Blockchain
                   </Link>
                   <Link 
-                    href="/solana-toolkit" 
+                    href="/automation" 
                     className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    FluvoSoft Solana Toolkit
+                    Automation
                   </Link>
                   <Link 
-                    href="/corda" 
+                    href="/custom-development" 
                     className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Corda
+                    Custom Development
                   </Link>
                   <Link 
-                    href="/service-support" 
+                    href="/saas" 
                     className="block py-2 pl-4 text-white hover:text-brand-orange-light font-inter transition-colors text-sm"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Service and Support
+                    SaaS
                   </Link>
                 </div>
                 <div className="pt-2 pb-1">

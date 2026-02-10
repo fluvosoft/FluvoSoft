@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fluvosoft.com/sitemap.xml
+
+# Disallow admin and private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow all important pages
+Allow: /
+Allow: /blockchain
+Allow: /automation
+Allow: /custom-development
+Allow: /saas
+Allow: /lumiro
+Allow: /about
+Allow: /contact
