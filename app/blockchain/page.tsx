@@ -174,10 +174,12 @@ export default function BlockchainPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Blockchain Development
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                Blockchain Development
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
               Building secure, transparent, and decentralized solutions that transform how businesses operate and trust is established.
             </p>
             <motion.a
@@ -207,8 +209,12 @@ export default function BlockchainPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">How Our Team Works</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  How Our Team Works
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Our blockchain development team combines deep technical expertise with business acumen to deliver solutions that drive real value.
               </p>
             </motion.div>
@@ -220,7 +226,7 @@ export default function BlockchainPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Collaborative Approach</h3>
+                <h3 className="text-2xl md:text-3xl font-normal text-white mb-4">Collaborative Approach</h3>
                 <p className="text-white/70 leading-relaxed mb-6">
                   Our blockchain team works closely with your business stakeholders to understand your unique challenges and opportunities. We believe in transparent communication and iterative development, ensuring you&apos;re involved at every stage of the process.
                 </p>
@@ -281,8 +287,12 @@ export default function BlockchainPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Development Process</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our Development Process
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 A proven methodology that ensures secure, scalable, and successful blockchain implementations
               </p>
             </motion.div>
@@ -303,7 +313,7 @@ export default function BlockchainPage() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-normal text-white mb-3">{item.title}</h3>
                     <p className="text-white/70 leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
@@ -324,8 +334,12 @@ export default function BlockchainPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Blockchain Technologies We Use</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Blockchain Technologies We Use
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 We work with leading blockchain platforms and tools to build the right solution for your needs
               </p>
             </motion.div>
@@ -343,7 +357,7 @@ export default function BlockchainPage() {
                   <div className="w-14 h-14 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange mb-4">
                     {tech.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{tech.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{tech.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm">{tech.description}</p>
                 </motion.div>
               ))}
@@ -363,8 +377,12 @@ export default function BlockchainPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Blockchain Products</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our Blockchain Products
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Explore our suite of blockchain solutions designed to solve real-world business challenges
               </p>
             </motion.div>
@@ -384,7 +402,7 @@ export default function BlockchainPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{product.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm mb-4 flex-1">{product.description}</p>
                   <ul className="space-y-2 mb-6">
                     {product.features.map((feature, idx) => (
@@ -425,10 +443,12 @@ export default function BlockchainPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="p-12 rounded-2xl bg-gradient-to-br from-brand-orange/10 via-brand-orange/5 to-transparent border border-brand-orange/20 backdrop-blur-sm">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Build Your Blockchain Solution?
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Ready to Build Your Blockchain Solution?
+                </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Let&apos;s discuss how blockchain technology can transform your business operations and create new opportunities for growth.
               </p>
               <motion.a

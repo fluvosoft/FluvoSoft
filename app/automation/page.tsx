@@ -174,10 +174,12 @@ export default function AutomationPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Automation Solutions
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                Automation Solutions
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
               Streamline workflows with intelligent automation that learns and adapts to your business processes. Reduce manual tasks and boost productivity.
             </p>
             <motion.a
@@ -207,8 +209,12 @@ export default function AutomationPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">How Our Team Works</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  How Our Team Works
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Our automation specialists combine deep technical expertise with business process knowledge to deliver solutions that drive real efficiency gains.
               </p>
             </motion.div>
@@ -220,7 +226,7 @@ export default function AutomationPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Data-Driven Approach</h3>
+                <h3 className="text-2xl md:text-3xl font-normal text-white mb-4">Data-Driven Approach</h3>
                 <p className="text-white/70 leading-relaxed mb-6">
                   Our automation team starts by deeply understanding your business processes, analyzing data flows, and identifying bottlenecks. We work closely with your team to ensure our solutions align with your operational needs and strategic objectives.
                 </p>
@@ -281,8 +287,12 @@ export default function AutomationPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Automation Process</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our Automation Process
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 A systematic approach to identifying, designing, and implementing automation solutions that deliver measurable results
               </p>
             </motion.div>
@@ -303,7 +313,7 @@ export default function AutomationPage() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-normal text-white mb-3">{item.title}</h3>
                     <p className="text-white/70 leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
@@ -324,8 +334,12 @@ export default function AutomationPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Automation Technologies We Use</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Automation Technologies We Use
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 We leverage cutting-edge automation technologies and tools to build solutions tailored to your business needs
               </p>
             </motion.div>
@@ -343,7 +357,7 @@ export default function AutomationPage() {
                   <div className="w-14 h-14 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange mb-4">
                     {tech.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{tech.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{tech.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm">{tech.description}</p>
                 </motion.div>
               ))}
@@ -363,8 +377,12 @@ export default function AutomationPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Automation Products</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our Automation Products
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Discover our suite of automation solutions designed to streamline operations and drive efficiency
               </p>
             </motion.div>
@@ -384,7 +402,7 @@ export default function AutomationPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{product.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm mb-4 flex-1">{product.description}</p>
                   <ul className="space-y-2 mb-6">
                     {product.features.map((feature, idx) => (
@@ -425,10 +443,12 @@ export default function AutomationPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="p-12 rounded-2xl bg-gradient-to-br from-brand-orange/10 via-brand-orange/5 to-transparent border border-brand-orange/20 backdrop-blur-sm">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Automate Your Operations?
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Ready to Automate Your Operations?
+                </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Let&apos;s discuss how intelligent automation can transform your business processes, reduce costs, and increase productivity.
               </p>
               <motion.a

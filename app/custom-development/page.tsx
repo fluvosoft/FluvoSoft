@@ -174,10 +174,12 @@ export default function CustomDevelopmentPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Custom Development
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                Custom Development
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
               Tailored applications built specifically for your needs. From web apps to enterprise solutions, we deliver software that scales with your business.
             </p>
             <motion.a
@@ -207,8 +209,12 @@ export default function CustomDevelopmentPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">How Our Team Works</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  How Our Team Works
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Our development team combines technical excellence with business understanding to deliver custom solutions that perfectly fit your needs.
               </p>
             </motion.div>
@@ -220,7 +226,7 @@ export default function CustomDevelopmentPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Client-Centric Development</h3>
+                <h3 className="text-2xl md:text-3xl font-normal text-white mb-4">Client-Centric Development</h3>
                 <p className="text-white/70 leading-relaxed mb-6">
                   We believe in close collaboration with our clients throughout the development process. Our team works as an extension of yours, ensuring that every feature and functionality aligns with your business objectives and user needs.
                 </p>
@@ -281,8 +287,12 @@ export default function CustomDevelopmentPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Development Process</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our Development Process
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 A proven methodology that ensures successful delivery of custom software solutions from concept to deployment
               </p>
             </motion.div>
@@ -303,7 +313,7 @@ export default function CustomDevelopmentPage() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-normal text-white mb-3">{item.title}</h3>
                     <p className="text-white/70 leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
@@ -324,8 +334,12 @@ export default function CustomDevelopmentPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Technologies We Use</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Technologies We Use
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 We leverage modern, proven technologies to build scalable, maintainable, and high-performance custom solutions
               </p>
             </motion.div>
@@ -343,7 +357,7 @@ export default function CustomDevelopmentPage() {
                   <div className="w-14 h-14 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange mb-4">
                     {tech.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{tech.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{tech.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm">{tech.description}</p>
                 </motion.div>
               ))}
@@ -363,8 +377,12 @@ export default function CustomDevelopmentPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Custom Development Services</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our Custom Development Services
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Comprehensive custom software solutions tailored to your specific business needs and requirements
               </p>
             </motion.div>
@@ -384,7 +402,7 @@ export default function CustomDevelopmentPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{service.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm mb-4 flex-1">{service.description}</p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
@@ -425,8 +443,12 @@ export default function CustomDevelopmentPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Project Timelines</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Project Timelines
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 We provide flexible timelines based on project complexity and requirements
               </p>
             </motion.div>
@@ -460,7 +482,7 @@ export default function CustomDevelopmentPage() {
                   <div className="w-16 h-16 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange font-bold text-2xl mx-auto mb-4">
                     {index + 1}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{project.type}</h3>
+                  <h3 className="text-xl font-normal text-white mb-2">{project.type}</h3>
                   <p className="text-brand-orange font-semibold mb-3">{project.duration}</p>
                   <p className="text-white/70 leading-relaxed text-sm">{project.description}</p>
                 </motion.div>
@@ -481,10 +503,12 @@ export default function CustomDevelopmentPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="p-12 rounded-2xl bg-gradient-to-br from-brand-orange/10 via-brand-orange/5 to-transparent border border-brand-orange/20 backdrop-blur-sm">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Build Your Custom Solution?
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Ready to Build Your Custom Solution?
+                </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Let&apos;s discuss your project requirements and create a custom software solution that perfectly fits your business needs.
               </p>
               <motion.a

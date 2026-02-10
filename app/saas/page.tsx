@@ -174,10 +174,12 @@ export default function SaaSPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              SaaS Products
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                SaaS Products
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
               Scalable software-as-a-service solutions that grow with your business. Cloud-based platforms with subscription management, analytics, and seamless integrations.
             </p>
             <motion.a
@@ -207,8 +209,12 @@ export default function SaaSPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">How Our Team Works</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  How Our Team Works
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Our SaaS development team specializes in building scalable, cloud-native platforms that deliver exceptional user experiences and drive business growth.
               </p>
             </motion.div>
@@ -220,7 +226,7 @@ export default function SaaSPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Scalability-First Approach</h3>
+                <h3 className="text-2xl md:text-3xl font-normal text-white mb-4">Scalability-First Approach</h3>
                 <p className="text-white/70 leading-relaxed mb-6">
                   We design SaaS platforms with scalability at the core. Our team builds cloud-native solutions using microservices architecture, ensuring your platform can handle growth from startup to enterprise scale.
                 </p>
@@ -281,8 +287,12 @@ export default function SaaSPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our SaaS Development Process</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our SaaS Development Process
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 A comprehensive approach to building successful SaaS platforms from concept to launch and beyond
               </p>
             </motion.div>
@@ -303,7 +313,7 @@ export default function SaaSPage() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-normal text-white mb-3">{item.title}</h3>
                     <p className="text-white/70 leading-relaxed">{item.description}</p>
                   </div>
                 </motion.div>
@@ -324,8 +334,12 @@ export default function SaaSPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">SaaS Technologies We Use</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  SaaS Technologies We Use
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 We leverage cutting-edge technologies and best practices to build robust, scalable SaaS platforms
               </p>
             </motion.div>
@@ -343,7 +357,7 @@ export default function SaaSPage() {
                   <div className="w-14 h-14 bg-brand-orange/20 rounded-xl flex items-center justify-center text-brand-orange mb-4">
                     {tech.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{tech.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{tech.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm">{tech.description}</p>
                 </motion.div>
               ))}
@@ -363,8 +377,12 @@ export default function SaaSPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our SaaS Services</h2>
-              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Our SaaS Services
+                </span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Comprehensive SaaS development and management services to help you build and scale your platform
               </p>
             </motion.div>
@@ -384,7 +402,7 @@ export default function SaaSPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{product.name}</h3>
+                  <h3 className="text-xl font-normal text-white mb-3">{product.name}</h3>
                   <p className="text-white/70 leading-relaxed text-sm mb-4 flex-1">{product.description}</p>
                   <ul className="space-y-2 mb-6">
                     {product.features.map((feature, idx) => (
@@ -425,10 +443,12 @@ export default function SaaSPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <div className="p-12 rounded-2xl bg-gradient-to-br from-brand-orange/10 via-brand-orange/5 to-transparent border border-brand-orange/20 backdrop-blur-sm">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Build Your SaaS Platform?
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white mb-4">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-orange-dark to-brand-orange bg-clip-text text-transparent">
+                  Ready to Build Your SaaS Platform?
+                </span>
               </h2>
-              <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-white/70 text-center max-w-4xl mx-auto leading-relaxed mb-8">
                 Let&apos;s discuss how we can help you build a scalable, successful SaaS platform that grows with your business and delights your users.
               </p>
               <motion.a
